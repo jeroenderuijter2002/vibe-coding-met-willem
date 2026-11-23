@@ -28,7 +28,11 @@ struct ContentView: View {
             }
         }
         .environment(\.locale, language.locale)
-        .onChange(of: workDay) { _, newValue in
+        .tint(Theme.gold)
+        .preferredColorScheme(.dark)
+        .onChange(of: workDay) { oldValue, newValue in
+            // Was de vorige dag al klaar? Dan telt hij mee voor je streak en level.
+            if let oldValue { Stats.recordCompleted(oldValue) }
             WorkDayStore.currentDay = newValue
             // Laat de widget direct een nieuw rooster maken met de nieuwe gegevens.
             WidgetCenter.shared.reloadAllTimelines()
@@ -41,6 +45,7 @@ struct ContentView: View {
             // Open je de app de volgende dag weer, dan begin je met een nieuwe dag.
             guard phase == .active else { return }
             if let day = workDay, !day.isCurrent() {
+                Stats.recordCompleted(day)
                 workDay = nil
             }
             // Bij openen: Live Activity gelijk trekken (bijv. afsluiten als je dag klaar is).
@@ -62,7 +67,12 @@ struct ContentView: View {
 
     /// Haalt de opgeslagen werkdag op, maar alleen als die nog bij vandaag hoort.
     private static func loadCurrentDay() -> WorkDay? {
-        guard let day = WorkDayStore.currentDay, day.isCurrent() else { return nil }
+        guard let day = WorkDayStore.currentDay else { return nil }
+        guard day.isCurrent() else {
+            // Dag van gisteren (of eerder) die klaar is: opslaan voor streak en level.
+            Stats.recordCompleted(day)
+            return nil
+        }
         return day
     }
 }

@@ -103,9 +103,9 @@ struct LiveProgress: View {
                 }
             }
         }
-        .tint(.green)
+        .tint(Theme.gold)
         .font(.caption2)
-        .foregroundStyle(.secondary)
+        .foregroundStyle(.white.opacity(0.65))
     }
 }
 
@@ -120,62 +120,69 @@ struct LoontellerWidgetEntryView: View {
         }
     }
 
+    private var coins: Int {
+        guard let day = entry.day else { return 0 }
+        return Int(day.progress(at: entry.date) * 100)
+    }
+
     private func amount(size: CGFloat) -> some View {
         Text(entry.earned, format: .currency(code: "EUR"))
-            .font(.system(size: size, weight: .bold, design: .rounded))
+            .font(.system(size: size, weight: .heavy, design: .rounded))
             .monospacedDigit()
-            .foregroundStyle(.green)
+            .foregroundStyle(Theme.goldGradient)
+            .shadow(color: Theme.gold.opacity(0.35), radius: 6)
             .minimumScaleFactor(0.5)
             .lineLimit(1)
     }
 
+    private var label: some View {
+        Text("Verdiend tot nu toe:")
+            .font(.caption.weight(.semibold))
+            .foregroundStyle(.white.opacity(0.7))
+    }
+
     private var small: some View {
         VStack(alignment: .leading, spacing: 4) {
-            Text("Verdiend tot nu toe:")
-                .font(.caption)
-                .foregroundStyle(.secondary)
+            HStack(alignment: .top) {
+                label
+                Spacer(minLength: 0)
+                CoinView(width: 22, height: 7)
+            }
             amount(size: 28)
             Spacer(minLength: 0)
             if let day = entry.day {
                 LiveProgress(start: day.start, end: day.effectiveEnd, now: entry.date)
+            } else {
+                Text("Start je dag in de app")
+                    .font(.caption2)
+                    .foregroundStyle(.white.opacity(0.65))
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
     }
 
     private var medium: some View {
-        HStack(alignment: .top, spacing: 16) {
+        HStack(alignment: .center, spacing: 14) {
             VStack(alignment: .leading, spacing: 4) {
-                Text("Verdiend tot nu toe:")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                amount(size: 34)
-                Spacer(minLength: 0)
+                label
+                amount(size: 32)
                 if let day = entry.day {
-                    Text("Vandaag in totaal: \(day.totalEarnings, format: .currency(code: "EUR"))")
+                    Text("van \(day.totalEarnings, format: .currency(code: "EUR"))")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
-                }
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-
-            VStack(alignment: .leading, spacing: 6) {
-                if let day = entry.day {
-                    HStack {
-                        Text(day.start, style: .time)
-                        Spacer()
-                        Text(day.effectiveEnd, style: .time)
-                    }
-                    .font(.caption2)
-                    .foregroundStyle(.secondary)
+                        .foregroundStyle(.white.opacity(0.6))
+                    Spacer(minLength: 0)
                     LiveProgress(start: day.start, end: day.effectiveEnd, now: entry.date)
                 } else {
+                    Spacer(minLength: 0)
                     Text("Start je dag in de app")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(.white.opacity(0.65))
                 }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+
+            // Dezelfde muntenstapels als in de app, in het klein.
+            CoinStackView(coins: coins, scale: 0.5)
         }
     }
 }
@@ -187,7 +194,8 @@ struct LoontellerWidget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             LoontellerWidgetEntryView(entry: entry)
                 .environment(\.locale, AppLanguage.saved.locale)
-                .containerBackground(.fill.tertiary, for: .widget)
+                .environment(\.colorScheme, .dark)
+                .containerBackground(for: .widget) { Theme.background }
         }
         .configurationDisplayName("Loonteller")
         .description("Zie hoeveel je vandaag al verdiend hebt.")

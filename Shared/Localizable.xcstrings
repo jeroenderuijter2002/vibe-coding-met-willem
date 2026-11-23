@@ -22,6 +22,16 @@
         }
       }
     },
+    "%lld munten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld coins"
+          }
+        }
+      }
+    },
     "0,00": {
       "localizations": {
         "en": {
@@ -32,12 +42,32 @@
         }
       }
     },
+    "1 munt = %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 coin = %@"
+          }
+        }
+      }
+    },
     "Aanpassen": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Edit"
+          }
+        }
+      }
+    },
+    "Baas": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Boss"
           }
         }
       }
@@ -62,6 +92,26 @@
         }
       }
     },
+    "Bijna daar! 🚀": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Almost there! 🚀"
+          }
+        }
+      }
+    },
+    "Dag voltooid! 🏆": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Day complete! 🏆"
+          }
+        }
+      }
+    },
     "Dagloon": {
       "localizations": {
         "en": {
@@ -72,12 +122,82 @@
         }
       }
     },
+    "Decimalen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Decimal places"
+          }
+        }
+      }
+    },
     "Eindtijd": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "End time"
+          }
+        }
+      }
+    },
+    "Geldmachine": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Money machine"
+          }
+        }
+      }
+    },
+    "Goudhaantje": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Golden boy"
+          }
+        }
+      }
+    },
+    "Halverwege! 🔥": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Halfway there! 🔥"
+          }
+        }
+      }
+    },
+    "Harde werker": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hard worker"
+          }
+        }
+      }
+    },
+    "Hoogste level bereikt!": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Highest level reached!"
+          }
+        }
+      }
+    },
+    "Instellingen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
           }
         }
       }
@@ -112,12 +232,32 @@
         }
       }
     },
+    "Kwart binnen! 💪": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A quarter done! 💪"
+          }
+        }
+      }
+    },
     "Let op: je ingevulde eindtijd is al voorbij. Met \"Start met ingevulde tijden\" staat de teller direct op het volle bedrag.": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Note: your end time has already passed. With \"Start with entered times\" the counter will show the full amount right away."
+          }
+        }
+      }
+    },
+    "Level up! %@ %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Level up! %@ %@"
           }
         }
       }
@@ -135,12 +275,32 @@
     "Loonteller": {
       "shouldTranslate": false
     },
+    "Miljonair in wording": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Millionaire in the making"
+          }
+        }
+      }
+    },
     "Nog %@ te gaan": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "%@ left"
+          }
+        }
+      }
+    },
+    "Nog %@ tot %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ until %@"
           }
         }
       }
@@ -175,12 +335,32 @@
         }
       }
     },
+    "Sjouwer": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hauler"
+          }
+        }
+      }
+    },
     "Soort loon": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Pay type"
+          }
+        }
+      }
+    },
+    "Stagiair": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Intern"
           }
         }
       }
@@ -245,12 +425,32 @@
         }
       }
     },
+    "Totaal verdiend: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Total earned: %@"
+          }
+        }
+      }
+    },
     "Uurloon": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Hourly wage"
+          }
+        }
+      }
+    },
+    "Vakman": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Craftsman"
           }
         }
       }
@@ -301,6 +501,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "See how much you've earned today."
+          }
+        }
+      }
+    },
+    "reeks": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "streak"
+          }
+        }
+      }
+    },
+    "van %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "of %@"
           }
         }
       }

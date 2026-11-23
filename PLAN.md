@@ -58,7 +58,9 @@ Ideeën, nog niet gekozen:
 - [x] Widget met live voortgangsbalk en afteller, ook in middelgroot formaat
 - Geschiedenis: verdiend per week of maand
 - Netto in plaats van bruto
-- Mooi ontwerp, animaties en een app-icoon
+- [x] Money game-ontwerp: donker/goud thema, muntenstapels (1 munt = 1% van je dag) met vallende munten,
+  mijlpalen (25/50/75/100%) met confetti, levels op basis van totaal verdiend, streak 🔥
+- [x] App-icoon (gemaakt met `tools/make_icon.swift`) + widget en Live Activity in dezelfde goud/groen-stijl
 
 ---
 

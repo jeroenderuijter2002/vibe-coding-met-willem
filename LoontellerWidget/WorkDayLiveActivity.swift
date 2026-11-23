@@ -11,8 +11,9 @@ struct WorkDayLiveActivity: Widget {
             LockScreenView(state: context.state)
                 .environment(\.locale, AppLanguage.saved.locale)
                 .padding()
-                .activityBackgroundTint(Color.black.opacity(0.6))
-                .activitySystemActionForegroundColor(.green)
+                .environment(\.colorScheme, .dark)
+                .activityBackgroundTint(Color(red: 0.03, green: 0.14, blue: 0.09).opacity(0.92))
+                .activitySystemActionForegroundColor(Theme.gold)
         } dynamicIsland: { context in
             let state = context.state
             return DynamicIsland {
@@ -22,7 +23,7 @@ struct WorkDayLiveActivity: Widget {
                             .bold()
                             .monospacedDigit()
                     } icon: {
-                        Image(systemName: "eurosign.circle.fill").foregroundStyle(.green)
+                        CoinView(width: 22, height: 8)
                     }
                     .environment(\.locale, AppLanguage.saved.locale)
                 }
@@ -39,7 +40,7 @@ struct WorkDayLiveActivity: Widget {
                         } currentValueLabel: {
                             EmptyView()
                         }
-                        .tint(.green)
+                        .tint(Theme.gold)
                         Text("Vandaag in totaal: \(state.totalEarnings, format: .currency(code: "EUR"))")
                             .font(.caption)
                             .foregroundStyle(.secondary)
@@ -47,20 +48,18 @@ struct WorkDayLiveActivity: Widget {
                     .environment(\.locale, AppLanguage.saved.locale)
                 }
             } compactLeading: {
-                Image(systemName: "eurosign.circle.fill")
-                    .foregroundStyle(.green)
+                CoinView(width: 20, height: 7)
             } compactTrailing: {
                 // Verdiend tot nu toe (ververst door de app zolang die open is).
                 Text(state.earned, format: .currency(code: "EUR"))
                     .monospacedDigit()
-                    .foregroundStyle(.green)
+                    .foregroundStyle(Theme.gold)
                     .minimumScaleFactor(0.6)
                     .lineLimit(1)
                     .frame(maxWidth: 72)
                     .environment(\.locale, AppLanguage.saved.locale)
             } minimal: {
-                Image(systemName: "eurosign.circle.fill")
-                    .foregroundStyle(.green)
+                CoinView(width: 20, height: 7)
             }
         }
     }
@@ -72,13 +71,18 @@ private struct LockScreenView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
-                Label("Loonteller", systemImage: "eurosign.circle.fill")
-                    .font(.headline)
-                    .foregroundStyle(.green)
+                Label {
+                    Text(verbatim: "Loonteller")
+                } icon: {
+                    CoinView(width: 22, height: 8)
+                }
+                .font(.headline)
+                .foregroundStyle(Theme.goldLight)
                 Spacer()
                 Text(state.earned, format: .currency(code: "EUR"))
-                    .font(.title3.bold())
+                    .font(.system(.title2, design: .rounded).weight(.heavy))
                     .monospacedDigit()
+                    .foregroundStyle(Theme.goldGradient)
             }
 
             ProgressView(timerInterval: state.start...state.end, countsDown: false) {
@@ -86,7 +90,7 @@ private struct LockScreenView: View {
             } currentValueLabel: {
                 EmptyView()
             }
-            .tint(.green)
+            .tint(Theme.gold)
 
             HStack {
                 Text(state.start, style: .time)

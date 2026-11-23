@@ -8,9 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		0BF6C9A3DE83910DE8E1D1A3 /* LiveActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEFBCBB103BB2DD72C392 /* LiveActivityManager.swift */; };
+		0CD4EF89BE9E71ECFDF191FC /* CoinStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B4EEFE73CE104637FC873 /* CoinStackView.swift */; };
+		138F5E894907E6E525B612A7 /* SettingsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4927BC04ED2F6FD2C5AAFE30 /* SettingsMenu.swift */; };
 		174F3B8798A8E1039AFFD41F /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE490C07B778DE9F83B57BC2 /* CounterView.swift */; };
+		1B016084B84E80D8499E467A /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63755FE10AA85AF0B28DAC5B /* Level.swift */; };
+		267E35553AF1FE78D228CEBD /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63755FE10AA85AF0B28DAC5B /* Level.swift */; };
+		27B6C4653F1DA7460D895A75 /* ConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE3EE202ED4C8C4E7302CE /* ConfettiView.swift */; };
 		297F65256FFCD484B8DB3C8C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 2FA486E8E4BE6FD34BFEC24F /* Localizable.xcstrings */; };
 		299B175DDFF68D7E3EF7F502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6709CB2F9FFFDA907B5389A5 /* Assets.xcassets */; };
+		2E7D543CEFB6CAB87EF23178 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196E9A1A2552BE73203BAAC4 /* Stats.swift */; };
+		2F629EF67EE1673CFE0E1DEE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401755922E7392255D4F27A /* Theme.swift */; };
 		30F2BC9628B4D07BE7FCDB17 /* LoontellerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C58F3E2C50AE8D45774F46 /* LoontellerApp.swift */; };
 		350F074DEC5D97126B51802F /* WorkDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B2CC45A368FD6756AD6C7 /* WorkDay.swift */; };
 		3DF4CFD3138154DECABBD986 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD1F1DC5464FC4BBEE2F92 /* ContentView.swift */; };
@@ -21,12 +28,14 @@
 		5C85699E7AC70C5D3DE031F5 /* AppLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DAE13682DE168A16966D59 /* AppLanguage.swift */; };
 		628413AEDCAC76211AD52677 /* WorkDayActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC5AD8E8A73691D663A1681 /* WorkDayActivityAttributes.swift */; };
 		645EE151825810655156458D /* WorkDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B2CC45A368FD6756AD6C7 /* WorkDay.swift */; };
+		833C72DEB67194E56BA554DA /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196E9A1A2552BE73203BAAC4 /* Stats.swift */; };
+		940CE8E5895E94E3AFD83671 /* CoinStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B4EEFE73CE104637FC873 /* CoinStackView.swift */; };
 		A67983D5EFFB2E446EC344F4 /* StartDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CEEF1235A39AA634267866 /* StartDayView.swift */; };
+		BC0EE515869988C0145BFA57 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401755922E7392255D4F27A /* Theme.swift */; };
 		D0A2FC2CDBDADA1BC5A48484 /* WorkDayStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E03C92FA2F572F82779FA3 /* WorkDayStore.swift */; };
 		DCF24A60AEFF5C0DA2F0A250 /* WorkDayActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC5AD8E8A73691D663A1681 /* WorkDayActivityAttributes.swift */; };
 		E1B3CD17E2127965AA4FF429 /* AppLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DAE13682DE168A16966D59 /* AppLanguage.swift */; };
 		EA48146B32D36D0607595B4B /* LoontellerWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 73BEDC0C0335DD46CA7E8404 /* LoontellerWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		F59A36122E3999D2D18460AE /* LanguageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136C68600579AE97E3C8604A /* LanguageMenu.swift */; };
 		FF88880742B27100380BEECC /* LoontellerWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78D0E2911F4917AFFD49D86 /* LoontellerWidgetBundle.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,18 +64,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0401755922E7392255D4F27A /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		0CAD1F1DC5464FC4BBEE2F92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		136C68600579AE97E3C8604A /* LanguageMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageMenu.swift; sourceTree = "<group>"; };
+		196E9A1A2552BE73203BAAC4 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
 		200E70574DF751A77D9C8234 /* Loonteller.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Loonteller.entitlements; sourceTree = "<group>"; };
 		2D6CEFBCBB103BB2DD72C392 /* LiveActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityManager.swift; sourceTree = "<group>"; };
 		2FA486E8E4BE6FD34BFEC24F /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		383A0E5F0AEFFC068240BA14 /* LoontellerWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LoontellerWidget.entitlements; sourceTree = "<group>"; };
 		39C58F3E2C50AE8D45774F46 /* LoontellerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoontellerApp.swift; sourceTree = "<group>"; };
+		4927BC04ED2F6FD2C5AAFE30 /* SettingsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMenu.swift; sourceTree = "<group>"; };
+		63755FE10AA85AF0B28DAC5B /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		6709CB2F9FFFDA907B5389A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73BEDC0C0335DD46CA7E8404 /* LoontellerWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = LoontellerWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8608579BACD0429DD62AF228 /* Loonteller.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Loonteller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88541652E963962CC23191F0 /* LoontellerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoontellerWidget.swift; sourceTree = "<group>"; };
 		891B2CC45A368FD6756AD6C7 /* WorkDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDay.swift; sourceTree = "<group>"; };
+		94BE3EE202ED4C8C4E7302CE /* ConfettiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiView.swift; sourceTree = "<group>"; };
 		9D21AE0CAA67EA4DBF36BB4D /* WorkDayLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDayLiveActivity.swift; sourceTree = "<group>"; };
 		B6DAE13682DE168A16966D59 /* AppLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguage.swift; sourceTree = "<group>"; };
 		BFC5AD8E8A73691D663A1681 /* WorkDayActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDayActivityAttributes.swift; sourceTree = "<group>"; };
@@ -75,6 +88,7 @@
 		E7E03C92FA2F572F82779FA3 /* WorkDayStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDayStore.swift; sourceTree = "<group>"; };
 		F01F7600AA45AA945C1C3057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F78D0E2911F4917AFFD49D86 /* LoontellerWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoontellerWidgetBundle.swift; sourceTree = "<group>"; };
+		FD3B4EEFE73CE104637FC873 /* CoinStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -101,7 +115,11 @@
 			isa = PBXGroup;
 			children = (
 				B6DAE13682DE168A16966D59 /* AppLanguage.swift */,
+				FD3B4EEFE73CE104637FC873 /* CoinStackView.swift */,
+				63755FE10AA85AF0B28DAC5B /* Level.swift */,
 				2FA486E8E4BE6FD34BFEC24F /* Localizable.xcstrings */,
+				196E9A1A2552BE73203BAAC4 /* Stats.swift */,
+				0401755922E7392255D4F27A /* Theme.swift */,
 				891B2CC45A368FD6756AD6C7 /* WorkDay.swift */,
 				BFC5AD8E8A73691D663A1681 /* WorkDayActivityAttributes.swift */,
 				E7E03C92FA2F572F82779FA3 /* WorkDayStore.swift */,
@@ -113,12 +131,13 @@
 			isa = PBXGroup;
 			children = (
 				6709CB2F9FFFDA907B5389A5 /* Assets.xcassets */,
+				94BE3EE202ED4C8C4E7302CE /* ConfettiView.swift */,
 				0CAD1F1DC5464FC4BBEE2F92 /* ContentView.swift */,
 				DE490C07B778DE9F83B57BC2 /* CounterView.swift */,
-				136C68600579AE97E3C8604A /* LanguageMenu.swift */,
 				2D6CEFBCBB103BB2DD72C392 /* LiveActivityManager.swift */,
 				200E70574DF751A77D9C8234 /* Loonteller.entitlements */,
 				39C58F3E2C50AE8D45774F46 /* LoontellerApp.swift */,
+				4927BC04ED2F6FD2C5AAFE30 /* SettingsMenu.swift */,
 				E3CEEF1235A39AA634267866 /* StartDayView.swift */,
 			);
 			path = Loonteller;
@@ -243,12 +262,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1B3CD17E2127965AA4FF429 /* AppLanguage.swift in Sources */,
+				0CD4EF89BE9E71ECFDF191FC /* CoinStackView.swift in Sources */,
+				27B6C4653F1DA7460D895A75 /* ConfettiView.swift in Sources */,
 				3DF4CFD3138154DECABBD986 /* ContentView.swift in Sources */,
 				174F3B8798A8E1039AFFD41F /* CounterView.swift in Sources */,
-				F59A36122E3999D2D18460AE /* LanguageMenu.swift in Sources */,
+				267E35553AF1FE78D228CEBD /* Level.swift in Sources */,
 				0BF6C9A3DE83910DE8E1D1A3 /* LiveActivityManager.swift in Sources */,
 				30F2BC9628B4D07BE7FCDB17 /* LoontellerApp.swift in Sources */,
+				138F5E894907E6E525B612A7 /* SettingsMenu.swift in Sources */,
 				A67983D5EFFB2E446EC344F4 /* StartDayView.swift in Sources */,
+				2E7D543CEFB6CAB87EF23178 /* Stats.swift in Sources */,
+				2F629EF67EE1673CFE0E1DEE /* Theme.swift in Sources */,
 				350F074DEC5D97126B51802F /* WorkDay.swift in Sources */,
 				DCF24A60AEFF5C0DA2F0A250 /* WorkDayActivityAttributes.swift in Sources */,
 				D0A2FC2CDBDADA1BC5A48484 /* WorkDayStore.swift in Sources */,
@@ -260,8 +284,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C85699E7AC70C5D3DE031F5 /* AppLanguage.swift in Sources */,
+				940CE8E5895E94E3AFD83671 /* CoinStackView.swift in Sources */,
+				1B016084B84E80D8499E467A /* Level.swift in Sources */,
 				43D2B0676BE52DD71E3B47F0 /* LoontellerWidget.swift in Sources */,
 				FF88880742B27100380BEECC /* LoontellerWidgetBundle.swift in Sources */,
+				833C72DEB67194E56BA554DA /* Stats.swift in Sources */,
+				BC0EE515869988C0145BFA57 /* Theme.swift in Sources */,
 				645EE151825810655156458D /* WorkDay.swift in Sources */,
 				628413AEDCAC76211AD52677 /* WorkDayActivityAttributes.swift in Sources */,
 				56F7BDFA4F067D0D40F9B27E /* WorkDayLiveActivity.swift in Sources */,

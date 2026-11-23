@@ -24,6 +24,11 @@ struct StartDayView: View {
     var body: some View {
         NavigationStack {
             Form {
+                Section {
+                    statsHeader
+                }
+                .listRowBackground(Color.clear)
+
                 Section("Loon") {
                     Picker("Soort loon", selection: $payType) {
                         Text("Dagloon").tag(PayType.daily)
@@ -75,6 +80,7 @@ struct StartDayView: View {
                         Label("Start nu", systemImage: "play.fill")
                             .frame(maxWidth: .infinity)
                             .bold()
+                            .foregroundStyle(.black)
                     }
                     .buttonStyle(.borderedProminent)
                     .controlSize(.large)
@@ -100,16 +106,50 @@ struct StartDayView: View {
                 .listRowBackground(Color.clear)
                 .listRowSeparator(.hidden)
 
-                Section {
+                Section("Instellingen") {
                     LanguagePicker()
+                    DecimalsPicker()
                 }
             }
             .navigationTitle("Start mijn dag")
             .scrollDismissesKeyboard(.immediately)
+            .scrollContentBackground(.hidden)
+            .background(Theme.background.ignoresSafeArea())
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) { LanguageMenu() }
+                ToolbarItem(placement: .topBarTrailing) { SettingsMenu() }
             }
         }
+    }
+
+    /// Bovenaan: je level, totaal verdiend en je streak.
+    private var statsHeader: some View {
+        let lifetime = Stats.recordedTotal(excluding: nil)
+        let level = Level.current(for: lifetime)
+        return HStack(spacing: 14) {
+            Text(verbatim: level.emoji)
+                .font(.system(size: 44))
+            VStack(alignment: .leading, spacing: 4) {
+                Text(level.title)
+                    .font(.headline)
+                    .foregroundStyle(Theme.goldLight)
+                Text("Totaal verdiend: \(lifetime, format: .currency(code: "EUR"))")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                ProgressView(value: level.progress(for: lifetime))
+                    .tint(Theme.gold)
+            }
+            Spacer()
+            VStack(spacing: 0) {
+                Text(verbatim: "🔥 \(Stats.streak())")
+                    .font(.title3.bold())
+                Text("reeks")
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
+            }
+        }
+        .padding()
+        .background(.white.opacity(0.06), in: .rect(cornerRadius: 16))
+        .overlay(RoundedRectangle(cornerRadius: 16).stroke(Theme.gold.opacity(0.3), lineWidth: 1))
     }
 
     /// De ingevulde werkdag, of `nil` als er nog geen (geldig) bedrag is ingevuld.
