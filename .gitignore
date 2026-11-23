@@ -221,3 +221,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Xcode / Swift
+xcuserdata/
+DerivedData/
+*.xcuserstate
+*.xcscmblueprint
+.swiftpm/
+.build/
+.DS_Store

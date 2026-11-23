@@ -36,10 +36,10 @@ Een iPhone-app waarmee je live ziet hoeveel geld je vandaag al verdiend hebt, me
 
 ## Stappen (afvinken als het af is)
 
-- [ ] **Stap 0: voorbereiding**
-  - [ ] Xcode installeren (Mac App Store)
-  - [ ] Xcode-project aanmaken: app + widget-extensie
-  - [ ] Lege app draait op de iPhone
+- [x] **Stap 0: voorbereiding**
+  - [x] Xcode installeren (Mac App Store)
+  - [x] Xcode-project aanmaken: app + widget-extensie (via XcodeGen, zie onder)
+  - [x] Lege app draait op de iPhone (+ voorbeeld-widget op het beginscherm)
 - [ ] **Stap 1: berekening**: code die het verdiende bedrag uitrekent (dag- en uurloon)
 - [ ] **Stap 2: invulscherm**: "Start mijn dag" met loon, tijden en pauze
 - [ ] **Stap 3: teller-scherm**: bedrag dat live oploopt
@@ -66,4 +66,7 @@ Ideeën, nog niet gekozen:
 - **Widget:** WidgetKit
 - **Gegevens delen tussen app en widget:** App Group (gedeelde opslag)
 - **Vertalingen:** String Catalog (`Localizable.xcstrings`)
+- **Project:** gemaakt met [XcodeGen](https://github.com/yonaskolb/XcodeGen) uit `project.yml`.
+  Nieuwe bestanden of targets toegevoegd? Pas `project.yml` aan en draai `xcodegen generate`.
+  Installeren: `brew install xcodegen`
 - **Op je iPhone zetten:** gratis met je Apple ID (opnieuw installeren na 7 dagen), of €99 per jaar voor een developer-account
