@@ -13,6 +13,7 @@
 		3DF4CFD3138154DECABBD986 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD1F1DC5464FC4BBEE2F92 /* ContentView.swift */; };
 		43D2B0676BE52DD71E3B47F0 /* LoontellerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88541652E963962CC23191F0 /* LoontellerWidget.swift */; };
 		645EE151825810655156458D /* WorkDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B2CC45A368FD6756AD6C7 /* WorkDay.swift */; };
+		A67983D5EFFB2E446EC344F4 /* StartDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CEEF1235A39AA634267866 /* StartDayView.swift */; };
 		EA48146B32D36D0607595B4B /* LoontellerWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 73BEDC0C0335DD46CA7E8404 /* LoontellerWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		8608579BACD0429DD62AF228 /* Loonteller.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Loonteller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88541652E963962CC23191F0 /* LoontellerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoontellerWidget.swift; sourceTree = "<group>"; };
 		891B2CC45A368FD6756AD6C7 /* WorkDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDay.swift; sourceTree = "<group>"; };
+		E3CEEF1235A39AA634267866 /* StartDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartDayView.swift; sourceTree = "<group>"; };
 		F01F7600AA45AA945C1C3057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 				6709CB2F9FFFDA907B5389A5 /* Assets.xcassets */,
 				0CAD1F1DC5464FC4BBEE2F92 /* ContentView.swift */,
 				39C58F3E2C50AE8D45774F46 /* LoontellerApp.swift */,
+				E3CEEF1235A39AA634267866 /* StartDayView.swift */,
 			);
 			path = Loonteller;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			files = (
 				3DF4CFD3138154DECABBD986 /* ContentView.swift in Sources */,
 				30F2BC9628B4D07BE7FCDB17 /* LoontellerApp.swift in Sources */,
+				A67983D5EFFB2E446EC344F4 /* StartDayView.swift in Sources */,
 				350F074DEC5D97126B51802F /* WorkDay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
