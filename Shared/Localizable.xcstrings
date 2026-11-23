@@ -2,6 +2,16 @@
   "sourceLanguage": "nl",
   "version": "1.0",
   "strings": {
+    "\"Start nu\" begint direct en duurt %@.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\"Start now\" starts right away and lasts %@."
+          }
+        }
+      }
+    },
     "%lld min": {
       "localizations": {
         "en": {
@@ -92,6 +102,16 @@
         }
       }
     },
+    "Let op: je ingevulde eindtijd is al voorbij. Met \"Start met ingevulde tijden\" staat de teller direct op het volle bedrag.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Note: your end time has already passed. With \"Start with entered times\" the counter will show the full amount right away."
+          }
+        }
+      }
+    },
     "Loon": {
       "localizations": {
         "en": {
@@ -155,12 +175,32 @@
         }
       }
     },
+    "Start met ingevulde tijden": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start with entered times"
+          }
+        }
+      }
+    },
     "Start mijn dag": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Start my day"
+          }
+        }
+      }
+    },
+    "Start nu": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start now"
           }
         }
       }

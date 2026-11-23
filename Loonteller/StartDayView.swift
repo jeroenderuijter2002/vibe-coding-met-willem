@@ -68,17 +68,37 @@ struct StartDayView: View {
                 }
 
                 Section {
+                    // Begint direct, met dezelfde lengte als de ingevulde werktijden.
                     Button {
-                        if let workDay { onStart(workDay) }
+                        if let workDay { onStart(workDay.starting(at: Date())) }
                     } label: {
-                        Text("Start mijn dag")
+                        Label("Start nu", systemImage: "play.fill")
                             .frame(maxWidth: .infinity)
                             .bold()
                     }
                     .buttonStyle(.borderedProminent)
-                    .disabled(workDay == nil)
-                    .listRowBackground(Color.clear)
+                    .controlSize(.large)
+
+                    // Gebruikt precies de ingevulde begin- en eindtijd.
+                    Button {
+                        if let workDay { onStart(workDay) }
+                    } label: {
+                        Text("Start met ingevulde tijden")
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.bordered)
+                } footer: {
+                    if let workDay {
+                        if workDay.effectiveEnd <= Date() {
+                            Text("Let op: je ingevulde eindtijd is al voorbij. Met \"Start met ingevulde tijden\" staat de teller direct op het volle bedrag.")
+                        } else {
+                            Text("\"Start nu\" begint direct en duurt \(Duration.seconds(workDay.shiftDuration), format: .units(allowed: [.hours, .minutes], width: .wide)).")
+                        }
+                    }
                 }
+                .disabled(workDay == nil)
+                .listRowBackground(Color.clear)
+                .listRowSeparator(.hidden)
 
                 Section {
                     LanguagePicker()

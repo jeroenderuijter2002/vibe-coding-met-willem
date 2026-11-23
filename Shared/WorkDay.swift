@@ -67,6 +67,14 @@ struct WorkDay: Codable, Equatable {
         calendar.isDate(start, inSameDayAs: date) || date < effectiveEnd
     }
 
+    /// Dezelfde werkdag, maar dan beginnend op `date` (bijv. nu), met dezelfde lengte.
+    func starting(at date: Date) -> WorkDay {
+        var copy = self
+        copy.start = date
+        copy.end = date.addingTimeInterval(shiftDuration)
+        return copy
+    }
+
     /// Dezelfde tijden (uren en minuten), maar dan op de dag van `date`.
     /// Handig om de gegevens van gisteren voor te vullen voor vandaag.
     func movedToDay(of date: Date = Date(), calendar: Calendar = .current) -> WorkDay {
