@@ -1,0 +1,259 @@
+{
+  "sourceLanguage": "nl",
+  "version": "1.0",
+  "strings": {
+    "%lld min": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld min"
+          }
+        }
+      }
+    },
+    "0,00": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "0.00"
+          }
+        }
+      }
+    },
+    "Aanpassen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Edit"
+          }
+        }
+      }
+    },
+    "Begintijd": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start time"
+          }
+        }
+      }
+    },
+    "Dagloon": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daily wage"
+          }
+        }
+      }
+    },
+    "Eindtijd": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "End time"
+          }
+        }
+      }
+    },
+    "Je dag is nog niet begonnen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your day hasn't started yet"
+          }
+        }
+      }
+    },
+    "Je verdient vandaag": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You'll earn today"
+          }
+        }
+      }
+    },
+    "Klaar voor vandaag! 🎉": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Done for today! 🎉"
+          }
+        }
+      }
+    },
+    "Loon": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pay"
+          }
+        }
+      }
+    },
+    "Loonteller": {
+      "shouldTranslate": false
+    },
+    "Nog": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Still"
+          }
+        }
+      }
+    },
+    "Pauze": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Break"
+          }
+        }
+      }
+    },
+    "Per dag": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Per day"
+          }
+        }
+      }
+    },
+    "Per uur": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Per hour"
+          }
+        }
+      }
+    },
+    "Soort loon": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pay type"
+          }
+        }
+      }
+    },
+    "Start mijn dag": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start my day"
+          }
+        }
+      }
+    },
+    "Systeem": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "System"
+          }
+        }
+      }
+    },
+    "Taal": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Language"
+          }
+        }
+      }
+    },
+    "Uurloon": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hourly wage"
+          }
+        }
+      }
+    },
+    "Vandaag in totaal: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Total today: %@"
+          }
+        }
+      }
+    },
+    "Verdiend tot nu toe": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Earned so far"
+          }
+        }
+      }
+    },
+    "Verdiend tot nu toe:": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Earned so far:"
+          }
+        }
+      }
+    },
+    "Werktijden": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Working hours"
+          }
+        }
+      }
+    },
+    "Zie hoeveel je vandaag al verdiend hebt.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "See how much you've earned today."
+          }
+        }
+      }
+    },
+    "te gaan": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "to go"
+          }
+        }
+      }
+    }
+  }
+}

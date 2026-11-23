@@ -32,9 +32,9 @@ struct StartDayView: View {
                     .pickerStyle(.segmented)
 
                     HStack {
-                        Text(payType == .daily ? "Per dag" : "Per uur")
+                        if payType == .daily { Text("Per dag") } else { Text("Per uur") }
                         Spacer()
-                        Text("€")
+                        Text(verbatim: "€")
                             .foregroundStyle(.secondary)
                         TextField("0,00", value: $amount, format: .number.precision(.fractionLength(0...2)))
                             .keyboardType(.decimalPad)
@@ -79,9 +79,16 @@ struct StartDayView: View {
                     .disabled(workDay == nil)
                     .listRowBackground(Color.clear)
                 }
+
+                Section {
+                    LanguagePicker()
+                }
             }
             .navigationTitle("Start mijn dag")
             .scrollDismissesKeyboard(.immediately)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) { LanguageMenu() }
+            }
         }
     }
 

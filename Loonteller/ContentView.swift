@@ -7,6 +7,10 @@ struct ContentView: View {
     /// De laatst ingevulde gegevens, zodat het formulier niet leeg begint.
     @State private var lastInput: WorkDay? = WorkDayStore.lastInput
 
+    /// Gekozen taal; alle teksten, bedragen en tijden volgen deze.
+    @AppStorage(AppLanguage.storageKey, store: WorkDayStore.sharedDefaults)
+    private var language: AppLanguage = .system
+
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
@@ -23,6 +27,7 @@ struct ContentView: View {
                 }
             }
         }
+        .environment(\.locale, language.locale)
         .onChange(of: workDay) { _, newValue in
             WorkDayStore.currentDay = newValue
             // Laat de widget direct een nieuw rooster maken met de nieuwe gegevens.

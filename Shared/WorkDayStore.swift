@@ -11,9 +11,12 @@ enum WorkDayStore {
     private static let currentDayKey = "currentDay"
     private static let lastInputKey = "lastInput"
 
-    private static var defaults: UserDefaults {
+    /// De gedeelde opslag van app en widget.
+    static var sharedDefaults: UserDefaults {
         UserDefaults(suiteName: appGroupID) ?? .standard
     }
+
+    private static var defaults: UserDefaults { sharedDefaults }
 
     /// De gestarte werkdag van vandaag, of `nil` als je dag nog niet gestart is.
     static var currentDay: WorkDay? {

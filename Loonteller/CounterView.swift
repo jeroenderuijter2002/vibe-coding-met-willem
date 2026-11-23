@@ -53,14 +53,18 @@ struct CounterView: View {
                     .foregroundStyle(.secondary)
                 }
 
-                Text("Vandaag in totaal: \(workDay.totalEarnings.formatted(.currency(code: "EUR")))")
+                Text("Vandaag in totaal: \(workDay.totalEarnings, format: .currency(code: "EUR"))")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
 
                 Spacer()
 
-                Button("Aanpassen", action: onEdit)
-                    .buttonStyle(.bordered)
+                HStack {
+                    Button("Aanpassen", action: onEdit)
+                    LanguageMenu()
+                        .labelStyle(.iconOnly)
+                }
+                .buttonStyle(.bordered)
             }
             .padding(32)
         }

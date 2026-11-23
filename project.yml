@@ -1,6 +1,8 @@
 name: Loonteller
 options:
   bundleIdPrefix: com.jeroenderuijter
+  # Teksten in de code zijn Nederlands; vertalingen staan in Shared/Localizable.xcstrings
+  developmentLanguage: nl
   deploymentTarget:
     iOS: "18.0"
 settings:
@@ -12,6 +14,9 @@ settings:
     # als je op je eigen Mac bouwt (en pas dan ook de bundle identifiers aan).
     DEVELOPMENT_TEAM: D4D3KCG4B8
     CODE_SIGN_STYLE: Automatic
+    # Teksten uit de code automatisch in de String Catalog zetten
+    SWIFT_EMIT_LOC_STRINGS: YES
+    LOCALIZATION_PREFERS_STRING_CATALOGS: YES
 targets:
   Loonteller:
     type: application

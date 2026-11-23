@@ -89,6 +89,7 @@ struct LoontellerWidget: Widget {
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             LoontellerWidgetEntryView(entry: entry)
+                .environment(\.locale, AppLanguage.saved.locale)
                 .containerBackground(.fill.tertiary, for: .widget)
         }
         .configurationDisplayName("Loonteller")
