@@ -58,4 +58,25 @@ struct WorkDay: Codable, Equatable {
     func earned(at date: Date) -> Double {
         totalEarnings * progress(at: date)
     }
+
+    // MARK: - Welke dag?
+
+    /// Hoort deze werkdag nog bij "vandaag"?
+    /// Ja als hij vandaag begonnen is, of als hij nog niet afgelopen is (nachtdienst).
+    func isCurrent(at date: Date = Date(), calendar: Calendar = .current) -> Bool {
+        calendar.isDate(start, inSameDayAs: date) || date < effectiveEnd
+    }
+
+    /// Dezelfde tijden (uren en minuten), maar dan op de dag van `date`.
+    /// Handig om de gegevens van gisteren voor te vullen voor vandaag.
+    func movedToDay(of date: Date = Date(), calendar: Calendar = .current) -> WorkDay {
+        func sameTime(_ time: Date) -> Date {
+            let parts = calendar.dateComponents([.hour, .minute], from: time)
+            return calendar.date(bySettingHour: parts.hour ?? 0, minute: parts.minute ?? 0, second: 0, of: date) ?? time
+        }
+        var copy = self
+        copy.start = sameTime(start)
+        copy.end = sameTime(end)
+        return copy
+    }
 }

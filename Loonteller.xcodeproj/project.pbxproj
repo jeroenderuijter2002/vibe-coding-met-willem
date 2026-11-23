@@ -13,8 +13,10 @@
 		350F074DEC5D97126B51802F /* WorkDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B2CC45A368FD6756AD6C7 /* WorkDay.swift */; };
 		3DF4CFD3138154DECABBD986 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD1F1DC5464FC4BBEE2F92 /* ContentView.swift */; };
 		43D2B0676BE52DD71E3B47F0 /* LoontellerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88541652E963962CC23191F0 /* LoontellerWidget.swift */; };
+		4E3ECABBC94C59A1C8CFF777 /* WorkDayStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E03C92FA2F572F82779FA3 /* WorkDayStore.swift */; };
 		645EE151825810655156458D /* WorkDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B2CC45A368FD6756AD6C7 /* WorkDay.swift */; };
 		A67983D5EFFB2E446EC344F4 /* StartDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CEEF1235A39AA634267866 /* StartDayView.swift */; };
+		D0A2FC2CDBDADA1BC5A48484 /* WorkDayStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E03C92FA2F572F82779FA3 /* WorkDayStore.swift */; };
 		EA48146B32D36D0607595B4B /* LoontellerWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 73BEDC0C0335DD46CA7E8404 /* LoontellerWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,7 @@
 		891B2CC45A368FD6756AD6C7 /* WorkDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDay.swift; sourceTree = "<group>"; };
 		DE490C07B778DE9F83B57BC2 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		E3CEEF1235A39AA634267866 /* StartDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartDayView.swift; sourceTree = "<group>"; };
+		E7E03C92FA2F572F82779FA3 /* WorkDayStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDayStore.swift; sourceTree = "<group>"; };
 		F01F7600AA45AA945C1C3057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				891B2CC45A368FD6756AD6C7 /* WorkDay.swift */,
+				E7E03C92FA2F572F82779FA3 /* WorkDayStore.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -204,6 +208,7 @@
 				30F2BC9628B4D07BE7FCDB17 /* LoontellerApp.swift in Sources */,
 				A67983D5EFFB2E446EC344F4 /* StartDayView.swift in Sources */,
 				350F074DEC5D97126B51802F /* WorkDay.swift in Sources */,
+				D0A2FC2CDBDADA1BC5A48484 /* WorkDayStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +218,7 @@
 			files = (
 				43D2B0676BE52DD71E3B47F0 /* LoontellerWidget.swift in Sources */,
 				645EE151825810655156458D /* WorkDay.swift in Sources */,
+				4E3ECABBC94C59A1C8CFF777 /* WorkDayStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
