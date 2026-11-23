@@ -16,7 +16,7 @@ targets:
   Loonteller:
     type: application
     platform: iOS
-    sources: [Loonteller]
+    sources: [Loonteller, Shared]
     dependencies:
       - target: LoontellerWidget
     settings:
@@ -31,7 +31,7 @@ targets:
   LoontellerWidget:
     type: app-extension
     platform: iOS
-    sources: [LoontellerWidget]
+    sources: [LoontellerWidget, Shared]
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.jeroenderuijter.Loonteller.Widget

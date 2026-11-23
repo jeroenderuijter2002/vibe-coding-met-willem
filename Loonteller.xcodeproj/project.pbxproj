@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		299B175DDFF68D7E3EF7F502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6709CB2F9FFFDA907B5389A5 /* Assets.xcassets */; };
 		30F2BC9628B4D07BE7FCDB17 /* LoontellerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C58F3E2C50AE8D45774F46 /* LoontellerApp.swift */; };
+		350F074DEC5D97126B51802F /* WorkDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B2CC45A368FD6756AD6C7 /* WorkDay.swift */; };
 		3DF4CFD3138154DECABBD986 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD1F1DC5464FC4BBEE2F92 /* ContentView.swift */; };
 		43D2B0676BE52DD71E3B47F0 /* LoontellerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88541652E963962CC23191F0 /* LoontellerWidget.swift */; };
+		645EE151825810655156458D /* WorkDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B2CC45A368FD6756AD6C7 /* WorkDay.swift */; };
 		EA48146B32D36D0607595B4B /* LoontellerWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 73BEDC0C0335DD46CA7E8404 /* LoontellerWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -42,9 +44,10 @@
 		0CAD1F1DC5464FC4BBEE2F92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		39C58F3E2C50AE8D45774F46 /* LoontellerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoontellerApp.swift; sourceTree = "<group>"; };
 		6709CB2F9FFFDA907B5389A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		73BEDC0C0335DD46CA7E8404 /* LoontellerWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LoontellerWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		8608579BACD0429DD62AF228 /* Loonteller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loonteller.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		73BEDC0C0335DD46CA7E8404 /* LoontellerWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = LoontellerWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8608579BACD0429DD62AF228 /* Loonteller.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Loonteller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88541652E963962CC23191F0 /* LoontellerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoontellerWidget.swift; sourceTree = "<group>"; };
+		891B2CC45A368FD6756AD6C7 /* WorkDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDay.swift; sourceTree = "<group>"; };
 		F01F7600AA45AA945C1C3057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,8 +66,17 @@
 			children = (
 				5B8419B72F8F4583710EA9EE /* Loonteller */,
 				E7C010B9560BC957DB0D1A12 /* LoontellerWidget */,
+				50A5FE0BC2DAC2FA3860F6D7 /* Shared */,
 				05BE403F6001AEBEED87BB30 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		50A5FE0BC2DAC2FA3860F6D7 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				891B2CC45A368FD6756AD6C7 /* WorkDay.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		5B8419B72F8F4583710EA9EE /* Loonteller */ = {
@@ -136,9 +148,11 @@
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					37557A6068FC65DE3628DE7E = {
+						DevelopmentTeam = D4D3KCG4B8;
 						ProvisioningStyle = Automatic;
 					};
 					3F8A34A1BE433DA58CE4951F = {
+						DevelopmentTeam = D4D3KCG4B8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -181,6 +195,7 @@
 			files = (
 				3DF4CFD3138154DECABBD986 /* ContentView.swift in Sources */,
 				30F2BC9628B4D07BE7FCDB17 /* LoontellerApp.swift in Sources */,
+				350F074DEC5D97126B51802F /* WorkDay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43D2B0676BE52DD71E3B47F0 /* LoontellerWidget.swift in Sources */,
+				645EE151825810655156458D /* WorkDay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +222,6 @@
 		3697E449A7EC0F7082F6BC10 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = D4D3KCG4B8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LoontellerWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Loonteller;
@@ -226,7 +241,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = D4D3KCG4B8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Loonteller;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -246,7 +260,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = D4D3KCG4B8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Loonteller;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -264,7 +277,6 @@
 		9EAB5D1F86312A23D76697DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = D4D3KCG4B8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LoontellerWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Loonteller;
@@ -316,7 +328,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = D4D3KCG4B8;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -376,7 +388,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = D4D3KCG4B8;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
