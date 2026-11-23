@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		174F3B8798A8E1039AFFD41F /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE490C07B778DE9F83B57BC2 /* CounterView.swift */; };
 		299B175DDFF68D7E3EF7F502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6709CB2F9FFFDA907B5389A5 /* Assets.xcassets */; };
 		30F2BC9628B4D07BE7FCDB17 /* LoontellerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C58F3E2C50AE8D45774F46 /* LoontellerApp.swift */; };
 		350F074DEC5D97126B51802F /* WorkDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B2CC45A368FD6756AD6C7 /* WorkDay.swift */; };
@@ -49,6 +50,7 @@
 		8608579BACD0429DD62AF228 /* Loonteller.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Loonteller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88541652E963962CC23191F0 /* LoontellerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoontellerWidget.swift; sourceTree = "<group>"; };
 		891B2CC45A368FD6756AD6C7 /* WorkDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDay.swift; sourceTree = "<group>"; };
+		DE490C07B778DE9F83B57BC2 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		E3CEEF1235A39AA634267866 /* StartDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartDayView.swift; sourceTree = "<group>"; };
 		F01F7600AA45AA945C1C3057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +88,7 @@
 			children = (
 				6709CB2F9FFFDA907B5389A5 /* Assets.xcassets */,
 				0CAD1F1DC5464FC4BBEE2F92 /* ContentView.swift */,
+				DE490C07B778DE9F83B57BC2 /* CounterView.swift */,
 				39C58F3E2C50AE8D45774F46 /* LoontellerApp.swift */,
 				E3CEEF1235A39AA634267866 /* StartDayView.swift */,
 			);
@@ -197,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DF4CFD3138154DECABBD986 /* ContentView.swift in Sources */,
+				174F3B8798A8E1039AFFD41F /* CounterView.swift in Sources */,
 				30F2BC9628B4D07BE7FCDB17 /* LoontellerApp.swift in Sources */,
 				A67983D5EFFB2E446EC344F4 /* StartDayView.swift in Sources */,
 				350F074DEC5D97126B51802F /* WorkDay.swift in Sources */,

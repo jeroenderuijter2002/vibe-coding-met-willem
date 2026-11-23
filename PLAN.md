@@ -42,7 +42,7 @@ Een iPhone-app waarmee je live ziet hoeveel geld je vandaag al verdiend hebt, me
   - [x] Lege app draait op de iPhone (+ voorbeeld-widget op het beginscherm)
 - [x] **Stap 1: berekening**: code die het verdiende bedrag uitrekent (dag- en uurloon). Zie `Shared/WorkDay.swift`
 - [x] **Stap 2: invulscherm**: "Start mijn dag" met loon, tijden en pauze
-- [ ] **Stap 3: teller-scherm**: bedrag dat live oploopt
+- [x] **Stap 3: teller-scherm**: bedrag dat live oploopt
 - [ ] **Stap 4: opslaan**: gegevens van vandaag bewaren, zodat ze er nog zijn als je de app sluit
 - [ ] **Stap 5: widget**: "Verdiend tot nu toe: €XX,XX" op het beginscherm
 - [ ] **Stap 6: taal**: Nederlands/Engels instelbaar
