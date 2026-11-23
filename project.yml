@@ -1,0 +1,45 @@
+name: Loonteller
+options:
+  bundleIdPrefix: com.jeroenderuijter
+  deploymentTarget:
+    iOS: "18.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    # Team ID van Jeroen (Personal Team). Willem: vervang door je eigen Team ID
+    # als je op je eigen Mac bouwt (en pas dan ook de bundle identifiers aan).
+    DEVELOPMENT_TEAM: D4D3KCG4B8
+    CODE_SIGN_STYLE: Automatic
+targets:
+  Loonteller:
+    type: application
+    platform: iOS
+    sources: [Loonteller, Shared]
+    dependencies:
+      - target: LoontellerWidget
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jeroenderuijter.Loonteller
+        TARGETED_DEVICE_FAMILY: "1"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Loonteller
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+  LoontellerWidget:
+    type: app-extension
+    platform: iOS
+    sources: [LoontellerWidget, Shared]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jeroenderuijter.Loonteller.Widget
+        TARGETED_DEVICE_FAMILY: "1"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Loonteller
+    info:
+      path: LoontellerWidget/Info.plist
+      properties:
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension

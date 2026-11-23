@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		174F3B8798A8E1039AFFD41F /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE490C07B778DE9F83B57BC2 /* CounterView.swift */; };
+		299B175DDFF68D7E3EF7F502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6709CB2F9FFFDA907B5389A5 /* Assets.xcassets */; };
+		30F2BC9628B4D07BE7FCDB17 /* LoontellerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C58F3E2C50AE8D45774F46 /* LoontellerApp.swift */; };
+		350F074DEC5D97126B51802F /* WorkDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B2CC45A368FD6756AD6C7 /* WorkDay.swift */; };
+		3DF4CFD3138154DECABBD986 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD1F1DC5464FC4BBEE2F92 /* ContentView.swift */; };
+		43D2B0676BE52DD71E3B47F0 /* LoontellerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88541652E963962CC23191F0 /* LoontellerWidget.swift */; };
+		4E3ECABBC94C59A1C8CFF777 /* WorkDayStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E03C92FA2F572F82779FA3 /* WorkDayStore.swift */; };
+		645EE151825810655156458D /* WorkDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B2CC45A368FD6756AD6C7 /* WorkDay.swift */; };
+		A67983D5EFFB2E446EC344F4 /* StartDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CEEF1235A39AA634267866 /* StartDayView.swift */; };
+		D0A2FC2CDBDADA1BC5A48484 /* WorkDayStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E03C92FA2F572F82779FA3 /* WorkDayStore.swift */; };
+		EA48146B32D36D0607595B4B /* LoontellerWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 73BEDC0C0335DD46CA7E8404 /* LoontellerWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		61CCFCB9C3BAA63DFBD7F170 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7EF2847F8BAA8253BB6AB11 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F8A34A1BE433DA58CE4951F;
+			remoteInfo = LoontellerWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F65FBE87912704C198377D36 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EA48146B32D36D0607595B4B /* LoontellerWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0CAD1F1DC5464FC4BBEE2F92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		39C58F3E2C50AE8D45774F46 /* LoontellerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoontellerApp.swift; sourceTree = "<group>"; };
+		6709CB2F9FFFDA907B5389A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		73BEDC0C0335DD46CA7E8404 /* LoontellerWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = LoontellerWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8608579BACD0429DD62AF228 /* Loonteller.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Loonteller.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		88541652E963962CC23191F0 /* LoontellerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoontellerWidget.swift; sourceTree = "<group>"; };
+		891B2CC45A368FD6756AD6C7 /* WorkDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDay.swift; sourceTree = "<group>"; };
+		DE490C07B778DE9F83B57BC2 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		E3CEEF1235A39AA634267866 /* StartDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartDayView.swift; sourceTree = "<group>"; };
+		E7E03C92FA2F572F82779FA3 /* WorkDayStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDayStore.swift; sourceTree = "<group>"; };
+		F01F7600AA45AA945C1C3057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		05BE403F6001AEBEED87BB30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8608579BACD0429DD62AF228 /* Loonteller.app */,
+				73BEDC0C0335DD46CA7E8404 /* LoontellerWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		35F8B30A9C0BB868FCC9F496 = {
+			isa = PBXGroup;
+			children = (
+				5B8419B72F8F4583710EA9EE /* Loonteller */,
+				E7C010B9560BC957DB0D1A12 /* LoontellerWidget */,
+				50A5FE0BC2DAC2FA3860F6D7 /* Shared */,
+				05BE403F6001AEBEED87BB30 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		50A5FE0BC2DAC2FA3860F6D7 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				891B2CC45A368FD6756AD6C7 /* WorkDay.swift */,
+				E7E03C92FA2F572F82779FA3 /* WorkDayStore.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		5B8419B72F8F4583710EA9EE /* Loonteller */ = {
+			isa = PBXGroup;
+			children = (
+				6709CB2F9FFFDA907B5389A5 /* Assets.xcassets */,
+				0CAD1F1DC5464FC4BBEE2F92 /* ContentView.swift */,
+				DE490C07B778DE9F83B57BC2 /* CounterView.swift */,
+				39C58F3E2C50AE8D45774F46 /* LoontellerApp.swift */,
+				E3CEEF1235A39AA634267866 /* StartDayView.swift */,
+			);
+			path = Loonteller;
+			sourceTree = "<group>";
+		};
+		E7C010B9560BC957DB0D1A12 /* LoontellerWidget */ = {
+			isa = PBXGroup;
+			children = (
+				F01F7600AA45AA945C1C3057 /* Info.plist */,
+				88541652E963962CC23191F0 /* LoontellerWidget.swift */,
+			);
+			path = LoontellerWidget;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37557A6068FC65DE3628DE7E /* Loonteller */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AECBCE795BB8F1F07D00E3F4 /* Build configuration list for PBXNativeTarget "Loonteller" */;
+			buildPhases = (
+				A5F1DF4A9354277DFCC2B798 /* Sources */,
+				ACFC1F26F5053BFB03DFA96D /* Resources */,
+				F65FBE87912704C198377D36 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9ABE02A029225A1E9AAC0A8 /* PBXTargetDependency */,
+			);
+			name = Loonteller;
+			packageProductDependencies = (
+			);
+			productName = Loonteller;
+			productReference = 8608579BACD0429DD62AF228 /* Loonteller.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3F8A34A1BE433DA58CE4951F /* LoontellerWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12F2C20666B006F200B256E1 /* Build configuration list for PBXNativeTarget "LoontellerWidget" */;
+			buildPhases = (
+				B957B4EC8A924761F47510FE /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LoontellerWidget;
+			packageProductDependencies = (
+			);
+			productName = LoontellerWidget;
+			productReference = 73BEDC0C0335DD46CA7E8404 /* LoontellerWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7EF2847F8BAA8253BB6AB11 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					37557A6068FC65DE3628DE7E = {
+						DevelopmentTeam = D4D3KCG4B8;
+						ProvisioningStyle = Automatic;
+					};
+					3F8A34A1BE433DA58CE4951F = {
+						DevelopmentTeam = D4D3KCG4B8;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 8410FA5002D280036AAAA4E4 /* Build configuration list for PBXProject "Loonteller" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 35F8B30A9C0BB868FCC9F496;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 05BE403F6001AEBEED87BB30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37557A6068FC65DE3628DE7E /* Loonteller */,
+				3F8A34A1BE433DA58CE4951F /* LoontellerWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ACFC1F26F5053BFB03DFA96D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				299B175DDFF68D7E3EF7F502 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5F1DF4A9354277DFCC2B798 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DF4CFD3138154DECABBD986 /* ContentView.swift in Sources */,
+				174F3B8798A8E1039AFFD41F /* CounterView.swift in Sources */,
+				30F2BC9628B4D07BE7FCDB17 /* LoontellerApp.swift in Sources */,
+				A67983D5EFFB2E446EC344F4 /* StartDayView.swift in Sources */,
+				350F074DEC5D97126B51802F /* WorkDay.swift in Sources */,
+				D0A2FC2CDBDADA1BC5A48484 /* WorkDayStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B957B4EC8A924761F47510FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43D2B0676BE52DD71E3B47F0 /* LoontellerWidget.swift in Sources */,
+				645EE151825810655156458D /* WorkDay.swift in Sources */,
+				4E3ECABBC94C59A1C8CFF777 /* WorkDayStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9ABE02A029225A1E9AAC0A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F8A34A1BE433DA58CE4951F /* LoontellerWidget */;
+			targetProxy = 61CCFCB9C3BAA63DFBD7F170 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3697E449A7EC0F7082F6BC10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LoontellerWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Loonteller;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeroenderuijter.Loonteller.Widget;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		4535FAAADAA062616D115A97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Loonteller;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeroenderuijter.Loonteller;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8E0DC2F98DA6F5CD2D28AFD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Loonteller;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeroenderuijter.Loonteller;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		9EAB5D1F86312A23D76697DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LoontellerWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Loonteller;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeroenderuijter.Loonteller.Widget;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		EEB1DC992F4642F33EAA039C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = D4D3KCG4B8;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F3227074EF62031C5BF9599B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = D4D3KCG4B8;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		12F2C20666B006F200B256E1 /* Build configuration list for PBXNativeTarget "LoontellerWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EAB5D1F86312A23D76697DF /* Debug */,
+				3697E449A7EC0F7082F6BC10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8410FA5002D280036AAAA4E4 /* Build configuration list for PBXProject "Loonteller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3227074EF62031C5BF9599B /* Debug */,
+				EEB1DC992F4642F33EAA039C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AECBCE795BB8F1F07D00E3F4 /* Build configuration list for PBXNativeTarget "Loonteller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4535FAAADAA062616D115A97 /* Debug */,
+				8E0DC2F98DA6F5CD2D28AFD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C7EF2847F8BAA8253BB6AB11 /* Project object */;
+}
