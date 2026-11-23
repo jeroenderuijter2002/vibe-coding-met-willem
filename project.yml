@@ -28,6 +28,11 @@ targets:
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    # App Group: gedeelde opslag tussen app en widget (moet gelijk zijn aan WorkDayStore.appGroupID)
+    entitlements:
+      path: Loonteller/Loonteller.entitlements
+      properties:
+        com.apple.security.application-groups: [group.com.jeroenderuijter.Loonteller]
   LoontellerWidget:
     type: app-extension
     platform: iOS
@@ -43,3 +48,7 @@ targets:
       properties:
         NSExtension:
           NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    entitlements:
+      path: LoontellerWidget/LoontellerWidget.entitlements
+      properties:
+        com.apple.security.application-groups: [group.com.jeroenderuijter.Loonteller]

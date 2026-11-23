@@ -46,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		0CAD1F1DC5464FC4BBEE2F92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		200E70574DF751A77D9C8234 /* Loonteller.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Loonteller.entitlements; sourceTree = "<group>"; };
+		383A0E5F0AEFFC068240BA14 /* LoontellerWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LoontellerWidget.entitlements; sourceTree = "<group>"; };
 		39C58F3E2C50AE8D45774F46 /* LoontellerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoontellerApp.swift; sourceTree = "<group>"; };
 		6709CB2F9FFFDA907B5389A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73BEDC0C0335DD46CA7E8404 /* LoontellerWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = LoontellerWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +95,7 @@
 				6709CB2F9FFFDA907B5389A5 /* Assets.xcassets */,
 				0CAD1F1DC5464FC4BBEE2F92 /* ContentView.swift */,
 				DE490C07B778DE9F83B57BC2 /* CounterView.swift */,
+				200E70574DF751A77D9C8234 /* Loonteller.entitlements */,
 				39C58F3E2C50AE8D45774F46 /* LoontellerApp.swift */,
 				E3CEEF1235A39AA634267866 /* StartDayView.swift */,
 			);
@@ -103,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				F01F7600AA45AA945C1C3057 /* Info.plist */,
+				383A0E5F0AEFFC068240BA14 /* LoontellerWidget.entitlements */,
 				88541652E963962CC23191F0 /* LoontellerWidget.swift */,
 			);
 			path = LoontellerWidget;
@@ -236,6 +240,7 @@
 		3697E449A7EC0F7082F6BC10 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = LoontellerWidget/LoontellerWidget.entitlements;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LoontellerWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Loonteller;
@@ -254,6 +259,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Loonteller/Loonteller.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Loonteller;
@@ -273,6 +279,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Loonteller/Loonteller.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Loonteller;
@@ -291,6 +298,7 @@
 		9EAB5D1F86312A23D76697DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = LoontellerWidget/LoontellerWidget.entitlements;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LoontellerWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Loonteller;

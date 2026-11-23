@@ -1,4 +1,5 @@
 import SwiftUI
+import WidgetKit
 
 struct ContentView: View {
     /// De werkdag van vandaag. `nil` = je dag is nog niet gestart.
@@ -24,6 +25,8 @@ struct ContentView: View {
         }
         .onChange(of: workDay) { _, newValue in
             WorkDayStore.currentDay = newValue
+            // Laat de widget direct een nieuw rooster maken met de nieuwe gegevens.
+            WidgetCenter.shared.reloadAllTimelines()
         }
         .onChange(of: lastInput) { _, newValue in
             WorkDayStore.lastInput = newValue
