@@ -43,13 +43,9 @@ struct CounterView: View {
                 }
 
                 if now >= workDay.start && now < workDay.effectiveEnd {
-                    HStack(spacing: 4) {
-                        Text("Nog")
-                        Text(timerInterval: now...workDay.effectiveEnd, countsDown: true)
-                            .monospacedDigit()
-                        Text("te gaan")
-                    }
-                    .font(.subheadline)
+                    Text("Nog \(Text(timerInterval: now...workDay.effectiveEnd, countsDown: true)) te gaan")
+                        .monospacedDigit()
+                        .font(.subheadline)
                     .foregroundStyle(.secondary)
                 }
 

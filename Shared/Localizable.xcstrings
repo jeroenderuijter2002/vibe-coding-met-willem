@@ -42,6 +42,16 @@
         }
       }
     },
+    "Begint om %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Starts at %@"
+          }
+        }
+      }
+    },
     "Begintijd": {
       "localizations": {
         "en": {
@@ -125,12 +135,12 @@
     "Loonteller": {
       "shouldTranslate": false
     },
-    "Nog": {
+    "Nog %@ te gaan": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Still"
+            "value": "%@ left"
           }
         }
       }
@@ -171,6 +181,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Pay type"
+          }
+        }
+      }
+    },
+    "Start je dag in de app": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start your day in the app"
           }
         }
       }
@@ -281,16 +301,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "See how much you've earned today."
-          }
-        }
-      }
-    },
-    "te gaan": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "to go"
           }
         }
       }

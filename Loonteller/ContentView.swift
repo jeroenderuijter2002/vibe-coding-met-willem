@@ -32,16 +32,32 @@ struct ContentView: View {
             WorkDayStore.currentDay = newValue
             // Laat de widget direct een nieuw rooster maken met de nieuwe gegevens.
             WidgetCenter.shared.reloadAllTimelines()
+            LiveActivityManager.sync(with: newValue)
         }
         .onChange(of: lastInput) { _, newValue in
             WorkDayStore.lastInput = newValue
         }
         .onChange(of: scenePhase) { _, phase in
             // Open je de app de volgende dag weer, dan begin je met een nieuwe dag.
-            if phase == .active, let day = workDay, !day.isCurrent() {
+            guard phase == .active else { return }
+            if let day = workDay, !day.isCurrent() {
                 workDay = nil
             }
+            // Bij openen: Live Activity gelijk trekken (bijv. afsluiten als je dag klaar is).
+            LiveActivityManager.sync(with: workDay)
         }
+        // Zolang de app open is: het bedrag in de Live Activity elke seconde bijwerken.
+        // Deze taak stopt vanzelf als de app naar de achtergrond gaat of de dag verandert.
+        .task(id: LiveUpdateKey(day: workDay, isActive: scenePhase == .active)) {
+            guard scenePhase == .active, let workDay else { return }
+            await LiveActivityManager.keepUpdating(workDay)
+        }
+    }
+
+    /// Bepaalt wanneer de bijwerk-taak opnieuw moet starten.
+    private struct LiveUpdateKey: Equatable {
+        let day: WorkDay?
+        let isActive: Bool
     }
 
     /// Haalt de opgeslagen werkdag op, maar alleen als die nog bij vandaag hoort.

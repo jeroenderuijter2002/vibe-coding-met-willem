@@ -53,8 +53,9 @@ Een iPhone-app waarmee je live ziet hoeveel geld je vandaag al verdiend hebt, me
 Ideeën, nog niet gekozen:
 - Rooster per dag van de week, zodat je niet elke dag opnieuw hoeft in te vullen
 - Pauze op een vast tijdstip (de teller staat dan stil tijdens de pauze)
-- Live Activity op het vergrendelscherm, met een teller die per seconde meeloopt
-- Grotere widget met voortgang en resterende tijd
+- [x] "Start nu"-knop: dag direct laten beginnen
+- [x] Live Activity op het vergrendelscherm + Dynamic Island (balk en afteller lopen live; bedrag kan niet live)
+- [x] Widget met live voortgangsbalk en afteller, ook in middelgroot formaat
 - Geschiedenis: verdiend per week of maand
 - Netto in plaats van bruto
 - Mooi ontwerp, animaties en een app-icoon
