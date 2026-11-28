@@ -102,16 +102,6 @@
         }
       }
     },
-    "Baas": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Boss"
-          }
-        }
-      }
-    },
     "Begin nu": {
       "localizations": {
         "en": {
@@ -232,52 +222,12 @@
         }
       }
     },
-    "Geldmachine": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Money machine"
-          }
-        }
-      }
-    },
-    "Goudhaantje": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Golden boy"
-          }
-        }
-      }
-    },
     "Halverwege! 🔥": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Halfway there! 🔥"
-          }
-        }
-      }
-    },
-    "Harde werker": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hard worker"
-          }
-        }
-      }
-    },
-    "Hoogste level bereikt!": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Highest level reached!"
           }
         }
       }
@@ -422,16 +372,6 @@
         }
       }
     },
-    "Level up! %@ %@": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Level up! %@ %@"
-          }
-        }
-      }
-    },
     "Loon": {
       "localizations": {
         "en": {
@@ -444,16 +384,6 @@
     },
     "Loonteller": {
       "shouldTranslate": false
-    },
-    "Miljonair in wording": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Millionaire in the making"
-          }
-        }
-      }
     },
     "Minuten": {
       "localizations": {
@@ -471,16 +401,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "%@ left"
-          }
-        }
-      }
-    },
-    "Nog %@ tot %@": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@ until %@"
           }
         }
       }
@@ -565,32 +485,12 @@
         }
       }
     },
-    "Sjouwer": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hauler"
-          }
-        }
-      }
-    },
     "Soort loon": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Pay type"
-          }
-        }
-      }
-    },
-    "Stagiair": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Intern"
           }
         }
       }
@@ -635,16 +535,6 @@
         }
       }
     },
-    "Totaal verdiend: %@": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Total earned: %@"
-          }
-        }
-      }
-    },
     "Uren": {
       "localizations": {
         "en": {
@@ -661,16 +551,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "Hourly wage"
-          }
-        }
-      }
-    },
-    "Vakman": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Craftsman"
           }
         }
       }
@@ -821,16 +701,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "incl. %@ travel allowance"
-          }
-        }
-      }
-    },
-    "reeks": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "streak"
           }
         }
       }

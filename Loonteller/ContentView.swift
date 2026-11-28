@@ -30,7 +30,7 @@ struct ContentView: View {
         .tint(Theme.gold)
         .preferredColorScheme(.dark)
         .onChange(of: workDay) { oldValue, newValue in
-            // Was de vorige dag al klaar? Dan telt hij mee voor je streak en level.
+            // Was de vorige dag al klaar? Dan bewaren we hem (voor de geschiedenis).
             if let oldValue { Stats.recordCompleted(oldValue) }
             WorkDayStore.currentDay = newValue
             // Laat de widget direct een nieuw rooster maken met de nieuwe gegevens.
@@ -82,7 +82,7 @@ struct ContentView: View {
     private static func loadCurrentDay() -> WorkDay? {
         guard let day = WorkDayStore.currentDay else { return nil }
         guard day.isCurrent() else {
-            // Dag van gisteren (of eerder) die klaar is: opslaan voor streak en level.
+            // Dag van gisteren (of eerder) die klaar is: bewaren (voor de geschiedenis).
             Stats.recordCompleted(day)
             return nil
         }

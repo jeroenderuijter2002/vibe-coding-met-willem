@@ -63,12 +63,12 @@ Ideeën, nog niet gekozen:
   Staat in één keer op de teller zodra je dag begint; wordt onthouden voor de volgende dag.
 - [x] Reistijd instellen met een tijdwiel (uren + minuten) i.p.v. +/- per 5 minuten
 - [x] Voor zzp'ers: tarief is ex BTW, kies 21% / 9% / 0%. Teller toont groot ex BTW en klein incl BTW
-  (BTW over loon én reisvergoeding). Levels en streak tellen met ex BTW.
+  (BTW over loon én reisvergoeding).
 - [x] Onbetaalde reistijd: bijv. het eerste uur reistijd per dag wordt niet betaald
 - Geschiedenis: verdiend per week of maand
 - Netto in plaats van bruto
 - [x] Money game-ontwerp: donker/goud thema, muntenstapels (1 munt = 1% van je dag) met vallende munten,
-  mijlpalen (25/50/75/100%) met confetti, levels op basis van totaal verdiend, streak 🔥
+  mijlpalen (25/50/75/100%) met confetti. (Levels en streak 🔥 zijn weer weggehaald: eerst simpel houden.)
 - [x] App-icoon (gemaakt met `tools/make_icon.swift`) + widget en Live Activity in dezelfde goud/groen-stijl
 
 ---

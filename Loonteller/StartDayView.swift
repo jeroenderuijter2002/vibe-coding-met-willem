@@ -41,11 +41,6 @@ struct StartDayView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section {
-                    statsHeader
-                }
-                .listRowBackground(Color.clear)
-
                 Section("Loon") {
                     Picker("Soort loon", selection: $payType) {
                         Text("Dagloon").tag(PayType.daily)
@@ -192,37 +187,6 @@ struct StartDayView: View {
                 ToolbarItem(placement: .topBarTrailing) { SettingsMenu() }
             }
         }
-    }
-
-    /// Bovenaan: je level, totaal verdiend en je streak.
-    private var statsHeader: some View {
-        let lifetime = Stats.recordedTotal(excluding: nil)
-        let level = Level.current(for: lifetime)
-        return HStack(spacing: 14) {
-            Text(verbatim: level.emoji)
-                .font(.system(size: 44))
-            VStack(alignment: .leading, spacing: 4) {
-                Text(level.title)
-                    .font(.headline)
-                    .foregroundStyle(Theme.goldLight)
-                Text("Totaal verdiend: \(lifetime, format: .currency(code: "EUR"))")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                ProgressView(value: level.progress(for: lifetime))
-                    .tint(Theme.gold)
-            }
-            Spacer()
-            VStack(spacing: 0) {
-                Text(verbatim: "🔥 \(Stats.streak())")
-                    .font(.title3.bold())
-                Text("reeks")
-                    .font(.caption2)
-                    .foregroundStyle(.secondary)
-            }
-        }
-        .padding()
-        .background(.white.opacity(0.06), in: .rect(cornerRadius: 16))
-        .overlay(RoundedRectangle(cornerRadius: 16).stroke(Theme.gold.opacity(0.3), lineWidth: 1))
     }
 
     /// Uitleg onder de startknoppen: wat de teller gaat doen met de ingevulde tijden.

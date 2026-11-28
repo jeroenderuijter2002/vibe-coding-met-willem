@@ -11,8 +11,6 @@
 		0CD4EF89BE9E71ECFDF191FC /* CoinStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B4EEFE73CE104637FC873 /* CoinStackView.swift */; };
 		138F5E894907E6E525B612A7 /* SettingsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4927BC04ED2F6FD2C5AAFE30 /* SettingsMenu.swift */; };
 		174F3B8798A8E1039AFFD41F /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE490C07B778DE9F83B57BC2 /* CounterView.swift */; };
-		1B016084B84E80D8499E467A /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63755FE10AA85AF0B28DAC5B /* Level.swift */; };
-		267E35553AF1FE78D228CEBD /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63755FE10AA85AF0B28DAC5B /* Level.swift */; };
 		27B6C4653F1DA7460D895A75 /* ConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE3EE202ED4C8C4E7302CE /* ConfettiView.swift */; };
 		870B3520AFED46312F54812A /* WeekSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE6402A972FCC94323AC23 /* WeekSchedule.swift */; };
 		109F750D3EB86EC175389F4B /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A3F3D9B0BC47F1769F7DA4 /* ScheduleView.swift */; };
@@ -75,7 +73,6 @@
 		383A0E5F0AEFFC068240BA14 /* LoontellerWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LoontellerWidget.entitlements; sourceTree = "<group>"; };
 		39C58F3E2C50AE8D45774F46 /* LoontellerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoontellerApp.swift; sourceTree = "<group>"; };
 		4927BC04ED2F6FD2C5AAFE30 /* SettingsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMenu.swift; sourceTree = "<group>"; };
-		63755FE10AA85AF0B28DAC5B /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		6709CB2F9FFFDA907B5389A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73BEDC0C0335DD46CA7E8404 /* LoontellerWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = LoontellerWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8608579BACD0429DD62AF228 /* Loonteller.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Loonteller.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,7 +117,6 @@
 			children = (
 				B6DAE13682DE168A16966D59 /* AppLanguage.swift */,
 				FD3B4EEFE73CE104637FC873 /* CoinStackView.swift */,
-				63755FE10AA85AF0B28DAC5B /* Level.swift */,
 				2FA486E8E4BE6FD34BFEC24F /* Localizable.xcstrings */,
 				196E9A1A2552BE73203BAAC4 /* Stats.swift */,
 				0401755922E7392255D4F27A /* Theme.swift */,
@@ -273,7 +269,6 @@
 				109F750D3EB86EC175389F4B /* ScheduleView.swift in Sources */,
 				3DF4CFD3138154DECABBD986 /* ContentView.swift in Sources */,
 				174F3B8798A8E1039AFFD41F /* CounterView.swift in Sources */,
-				267E35553AF1FE78D228CEBD /* Level.swift in Sources */,
 				0BF6C9A3DE83910DE8E1D1A3 /* LiveActivityManager.swift in Sources */,
 				30F2BC9628B4D07BE7FCDB17 /* LoontellerApp.swift in Sources */,
 				138F5E894907E6E525B612A7 /* SettingsMenu.swift in Sources */,
@@ -292,7 +287,6 @@
 			files = (
 				5C85699E7AC70C5D3DE031F5 /* AppLanguage.swift in Sources */,
 				940CE8E5895E94E3AFD83671 /* CoinStackView.swift in Sources */,
-				1B016084B84E80D8499E467A /* Level.swift in Sources */,
 				43D2B0676BE52DD71E3B47F0 /* LoontellerWidget.swift in Sources */,
 				FF88880742B27100380BEECC /* LoontellerWidgetBundle.swift in Sources */,
 				833C72DEB67194E56BA554DA /* Stats.swift in Sources */,

@@ -1,7 +1,6 @@
 import SwiftUI
 
-/// Het teller-scherm als "money game": munten stapelen zich op, je stijgt in level,
-/// en bij mijlpalen (25/50/75/100%) is er een feestje.
+/// Het teller-scherm: munten stapelen zich op, en bij mijlpalen (25/50/75/100%) is er een feestje.
 struct CounterView: View {
     let workDay: WorkDay
     /// Wordt aangeroepen als je op "Aanpassen" tikt.
@@ -9,10 +8,6 @@ struct CounterView: View {
 
     /// Aantal munten op een volle dag (5 stapels van 20). Eén munt = 1% van je dag.
     private let totalCoins = 100
-
-    /// Totaal verdiend op eerdere, afgemaakte dagen (vandaag tellen we live mee).
-    @State private var earlierEarnings: Double = 0
-    @State private var streak: Int = 0
 
     // Feestjes
     @State private var banner: Banner?
@@ -27,13 +22,13 @@ struct CounterView: View {
         ZStack {
             Theme.background.ignoresSafeArea()
 
-            // De rest van het scherm (munten, mijlpalen, level) wordt 4× per seconde bijgewerkt.
+            // De rest van het scherm (munten, mijlpalen) wordt 4× per seconde bijgewerkt.
             // Het bedrag zelf loopt apart, elk beeldje (zie LiveAmountView).
             TimelineView(.periodic(from: .now, by: 0.25)) { context in
                 content(at: context.date)
             }
 
-            // Mijlpaal- of level-up-melding bovenin
+            // Mijlpaal-melding bovenin
             VStack {
                 if let banner {
                     Text(banner.text)
@@ -54,7 +49,8 @@ struct CounterView: View {
             ConfettiView(trigger: confettiTrigger)
         }
         .preferredColorScheme(.dark)
-        .onAppear(perform: loadStats)
+        // Is de dag al klaar (bijv. app later geopend)? Dan meteen opslaan.
+        .onAppear { Stats.recordCompleted(workDay) }
         .sensoryFeedback(.success, trigger: confettiTrigger)
     }
 
@@ -63,16 +59,11 @@ struct CounterView: View {
     @ViewBuilder
     private func content(at now: Date) -> some View {
         let progress = workDay.progress(at: now)
-        let earned = workDay.earned(at: now)
         // Munten volgen het geld, dus de reisvergoeding ligt er bij het begin al als munten.
         let coins = Int(workDay.earnedFraction(at: now) * Double(totalCoins))
         let milestone = Int(progress * 4)            // 0...4 → 25%, 50%, 75%, 100%
-        let lifetime = earlierEarnings + earned
-        let level = Level.current(for: lifetime)
 
         VStack(spacing: 18) {
-            topBar(level: level, lifetime: lifetime)
-
             Spacer(minLength: 0)
 
             // Bedrag
@@ -128,53 +119,6 @@ struct CounterView: View {
             guard new > old else { return }
             celebrate(milestone: new)
         }
-        .onChange(of: level.number) { old, new in
-            guard new > old else { return }
-            show(Banner(text: "Level up! \(Text(verbatim: level.emoji)) \(Text(level.title))"))
-            confettiTrigger += 1
-        }
-    }
-
-    private func topBar(level: Level, lifetime: Double) -> some View {
-        HStack(alignment: .top) {
-            // Level
-            VStack(alignment: .leading, spacing: 6) {
-                HStack(spacing: 6) {
-                    Text(verbatim: level.emoji)
-                    Text(level.title)
-                        .bold()
-                }
-                .font(.subheadline)
-                .foregroundStyle(Theme.goldLight)
-
-                ProgressView(value: level.progress(for: lifetime))
-                    .tint(Theme.gold)
-                    .frame(width: 140)
-
-                if let next = level.next {
-                    Text("Nog \(next.threshold - lifetime, format: .currency(code: "EUR").precision(.fractionLength(0))) tot \(Text(next.title))")
-                        .font(.caption2)
-                        .foregroundStyle(.white.opacity(0.6))
-                } else {
-                    Text("Hoogste level bereikt!")
-                        .font(.caption2)
-                        .foregroundStyle(.white.opacity(0.6))
-                }
-            }
-            .glassCard()
-
-            Spacer()
-
-            // Streak
-            VStack(spacing: 0) {
-                Text(verbatim: "🔥 \(streak)")
-                    .font(.title3.bold())
-                Text("reeks")
-                    .font(.caption2)
-                    .foregroundStyle(.white.opacity(0.6))
-            }
-            .glassCard()
-        }
     }
 
     private func dayProgress(progress: Double, now: Date) -> some View {
@@ -228,7 +172,6 @@ struct CounterView: View {
 
         if milestone >= 4 {
             Stats.recordCompleted(workDay)
-            loadStats()
         }
     }
 
@@ -238,14 +181,6 @@ struct CounterView: View {
             try? await Task.sleep(for: .seconds(3))
             if banner == newBanner { banner = nil }
         }
-    }
-
-    private func loadStats() {
-        // Is de dag al klaar (bijv. app later geopend)? Dan meteen opslaan.
-        Stats.recordCompleted(workDay)
-        // Vandaag tellen we live mee, dus die halen we uit het opgeslagen totaal.
-        earlierEarnings = Stats.recordedTotal(excluding: workDay)
-        streak = Stats.streak()
     }
 }
 
