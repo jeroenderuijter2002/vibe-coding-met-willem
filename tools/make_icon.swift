@@ -8,14 +8,14 @@ let ctx = CGContext(data: nil, width: Int(size), height: Int(size), bitsPerCompo
                     space: cs, bitmapInfo: CGImageAlphaInfo.noneSkipLast.rawValue)!
 func rgb(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat, _ a: CGFloat = 1) -> CGColor { CGColor(srgbRed: r, green: g, blue: b, alpha: a) }
 
-// Achtergrond: donkergroen verloop (zelfde als de app)
-let bg = CGGradient(colorsSpace: cs, colors: [rgb(0.07, 0.30, 0.19), rgb(0.01, 0.07, 0.05)] as CFArray, locations: [0, 1])!
+// Achtergrond: middernachtblauw verloop (zelfde als de app, zie Shared/Theme.swift)
+let bg = CGGradient(colorsSpace: cs, colors: [rgb(0.09, 0.13, 0.27), rgb(0.03, 0.04, 0.10)] as CFArray, locations: [0, 1])!
 ctx.drawLinearGradient(bg, start: CGPoint(x: 0, y: size), end: CGPoint(x: 0, y: 0), options: [])
-// Zachte gouden gloed achter de munten
-let glow = CGGradient(colorsSpace: cs, colors: [rgb(1, 0.8, 0.25, 0.35), rgb(1, 0.8, 0.25, 0)] as CFArray, locations: [0, 1])!
+// Zachte koraal gloed achter de munten
+let glow = CGGradient(colorsSpace: cs, colors: [rgb(0.94, 0.54, 0.42, 0.35), rgb(0.94, 0.54, 0.42, 0)] as CFArray, locations: [0, 1])!
 ctx.drawRadialGradient(glow, startCenter: CGPoint(x: 512, y: 470), startRadius: 0, endCenter: CGPoint(x: 512, y: 470), endRadius: 480, options: [])
 
-let goldLight = rgb(1.0, 0.93, 0.62), gold = rgb(1.0, 0.80, 0.25), goldDark = rgb(0.72, 0.48, 0.04), edge = rgb(0.55, 0.35, 0.02)
+let goldLight = rgb(1.0, 0.79, 0.69), gold = rgb(0.94, 0.54, 0.42), goldDark = rgb(0.72, 0.33, 0.23), edge = rgb(0.50, 0.21, 0.14)  // perzik, koraal, koper
 let coinGrad = CGGradient(colorsSpace: cs, colors: [goldLight, gold, goldDark] as CFArray, locations: [0, 0.45, 1])!
 
 func coin(cx: CGFloat, y: CGFloat, w: CGFloat, h: CGFloat, thickness: CGFloat) {
@@ -63,7 +63,7 @@ euro.draw(at: CGPoint(x: 512 - es.width/2, y: bigRect.midY - es.height/2 + 6))
 
 // Sterretjes
 func sparkle(_ x: CGFloat, _ y: CGFloat, _ r: CGFloat) {
-    ctx.setFillColor(rgb(1, 0.95, 0.75, 0.95))
+    ctx.setFillColor(rgb(1, 0.88, 0.80, 0.95))
     let p = CGMutablePath()
     p.move(to: CGPoint(x: x, y: y + r)); p.addQuadCurve(to: CGPoint(x: x + r, y: y), control: CGPoint(x: x, y: y))
     p.addQuadCurve(to: CGPoint(x: x, y: y - r), control: CGPoint(x: x, y: y)); p.addQuadCurve(to: CGPoint(x: x - r, y: y), control: CGPoint(x: x, y: y))

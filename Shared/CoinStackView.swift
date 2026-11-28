@@ -9,13 +9,13 @@ struct CoinView: View {
         ZStack {
             // Dikte van de munt
             Ellipse()
-                .fill(Theme.goldDark)
+                .fill(Theme.accentDark)
                 .offset(y: 2.5)
             // Bovenkant
             Ellipse()
-                .fill(Theme.goldGradient)
+                .fill(Theme.accentGradient)
             Ellipse()
-                .stroke(Theme.goldDark.opacity(0.8), lineWidth: 1)
+                .stroke(Theme.accentDark.opacity(0.8), lineWidth: 1)
             Ellipse()
                 .fill(.white.opacity(0.35))
                 .frame(width: width * 0.45, height: height * 0.25)

@@ -103,7 +103,7 @@ struct LiveProgress: View {
                 }
             }
         }
-        .tint(Theme.gold)
+        .tint(Theme.accent)
         .font(.caption2)
         .foregroundStyle(.white.opacity(0.65))
     }
@@ -129,8 +129,8 @@ struct LoontellerWidgetEntryView: View {
         Text(entry.earned, format: .currency(code: "EUR"))
             .font(.system(size: size, weight: .heavy, design: .rounded))
             .monospacedDigit()
-            .foregroundStyle(Theme.goldGradient)
-            .shadow(color: Theme.gold.opacity(0.35), radius: 6)
+            .foregroundStyle(Theme.accentGradient)
+            .shadow(color: Theme.accent.opacity(0.35), radius: 6)
             .minimumScaleFactor(0.5)
             .lineLimit(1)
     }
@@ -173,7 +173,7 @@ struct LoontellerWidgetEntryView: View {
                     if day.vatPercent > 0 {
                         Text("Incl. BTW: \(entry.earned * day.vatMultiplier, format: .currency(code: "EUR"))")
                             .font(.caption.weight(.semibold))
-                            .foregroundStyle(Theme.goldLight)
+                            .foregroundStyle(Theme.accentLight)
                     }
                     Spacer(minLength: 0)
                     LiveProgress(start: day.start, end: day.effectiveEnd, now: entry.date)

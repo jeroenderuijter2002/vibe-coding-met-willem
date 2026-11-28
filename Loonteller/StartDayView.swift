@@ -128,7 +128,7 @@ struct StartDayView: View {
                                 Spacer()
                                 Text(workDay.totalIncludingVAT, format: .currency(code: "EUR"))
                             }
-                            .foregroundStyle(Theme.goldLight)
+                            .foregroundStyle(Theme.accentLight)
                         }
                     }
                 }
@@ -290,7 +290,7 @@ struct DurationPickerRow: View {
                     .foregroundStyle(.primary)
                 Spacer()
                 Text(Duration.seconds(minutes * 60), format: .units(allowed: [.hours, .minutes], width: .abbreviated))
-                    .foregroundStyle(isExpanded ? Theme.gold : .secondary)
+                    .foregroundStyle(isExpanded ? Theme.accent : .secondary)
             }
         }
 

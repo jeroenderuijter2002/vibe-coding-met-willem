@@ -1,32 +1,42 @@
 import SwiftUI
 
-/// Kleuren en stijl van de app: donker groen met goud, als een kluis vol geld.
+/// Kleuren en stijl van de app: diep middernachtblauw met koraal/koperen munten en perzik accenten.
+/// Wil je andere kleuren? Pas alleen dit bestand aan (en `tools/make_icon.swift` voor het icoon).
 enum Theme {
-    static let gold = Color(red: 1.0, green: 0.80, blue: 0.25)
-    static let goldDark = Color(red: 0.78, green: 0.53, blue: 0.05)
-    static let goldLight = Color(red: 1.0, green: 0.92, blue: 0.60)
+    /// Hoofdkleur: koraal (munten, knoppen, voortgangsbalken).
+    static let accent = Color(red: 0.94, green: 0.54, blue: 0.42)        // #F08A6C
+    /// Donkere variant: koper (rand en dikte van de munten).
+    static let accentDark = Color(red: 0.72, green: 0.33, blue: 0.23)    // #B8533A
+    /// Lichte variant: perzik (kleine teksten en accenten).
+    static let accentLight = Color(red: 1.0, green: 0.79, blue: 0.69)    // #FFC9B0
+
+    /// Bovenkant van de achtergrond: middernachtblauw.
+    static let backgroundTop = Color(red: 0.06, green: 0.09, blue: 0.19) // #0F1630
+    /// Onderkant van de achtergrond: bijna zwart blauw.
+    static let backgroundBottom = Color(red: 0.03, green: 0.04, blue: 0.10) // #070B1A
 
     static let background = LinearGradient(
-        colors: [Color(red: 0.04, green: 0.20, blue: 0.13), Color(red: 0.01, green: 0.06, blue: 0.04)],
+        colors: [backgroundTop, backgroundBottom],
         startPoint: .top,
         endPoint: .bottom
     )
 
-    static let goldGradient = LinearGradient(
-        colors: [goldLight, gold, goldDark],
+    /// Verloop voor munten en het grote bedrag: perzik → koraal → koper.
+    static let accentGradient = LinearGradient(
+        colors: [accentLight, accent, accentDark],
         startPoint: .top,
         endPoint: .bottom
     )
 }
 
-/// Een gouden "kaartje" als achtergrond, bijv. voor badges.
+/// Een "kaartje" als achtergrond, bijv. voor badges.
 struct GlassCard: ViewModifier {
     func body(content: Content) -> some View {
         content
             .padding(.horizontal, 12)
             .padding(.vertical, 8)
             .background(.white.opacity(0.08), in: .capsule)
-            .overlay(Capsule().stroke(Theme.gold.opacity(0.35), lineWidth: 1))
+            .overlay(Capsule().stroke(Theme.accent.opacity(0.35), lineWidth: 1))
     }
 }
 

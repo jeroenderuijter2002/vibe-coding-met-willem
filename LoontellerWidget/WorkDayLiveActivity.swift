@@ -12,8 +12,8 @@ struct WorkDayLiveActivity: Widget {
                 .environment(\.locale, AppLanguage.saved.locale)
                 .padding()
                 .environment(\.colorScheme, .dark)
-                .activityBackgroundTint(Color(red: 0.03, green: 0.14, blue: 0.09).opacity(0.92))
-                .activitySystemActionForegroundColor(Theme.gold)
+                .activityBackgroundTint(Theme.backgroundTop.opacity(0.92))
+                .activitySystemActionForegroundColor(Theme.accent)
         } dynamicIsland: { context in
             let state = context.state
             return DynamicIsland {
@@ -40,7 +40,7 @@ struct WorkDayLiveActivity: Widget {
                         } currentValueLabel: {
                             EmptyView()
                         }
-                        .tint(Theme.gold)
+                        .tint(Theme.accent)
                         Text("Vandaag in totaal: \(state.totalEarnings, format: .currency(code: "EUR"))")
                             .font(.caption)
                             .foregroundStyle(.secondary)
@@ -53,7 +53,7 @@ struct WorkDayLiveActivity: Widget {
                 // Verdiend tot nu toe (ververst door de app zolang die open is).
                 Text(state.earned, format: .currency(code: "EUR"))
                     .monospacedDigit()
-                    .foregroundStyle(Theme.gold)
+                    .foregroundStyle(Theme.accent)
                     .minimumScaleFactor(0.6)
                     .lineLimit(1)
                     .frame(maxWidth: 72)
@@ -77,12 +77,12 @@ private struct LockScreenView: View {
                     CoinView(width: 22, height: 8)
                 }
                 .font(.headline)
-                .foregroundStyle(Theme.goldLight)
+                .foregroundStyle(Theme.accentLight)
                 Spacer()
                 Text(state.earned, format: .currency(code: "EUR"))
                     .font(.system(.title2, design: .rounded).weight(.heavy))
                     .monospacedDigit()
-                    .foregroundStyle(Theme.goldGradient)
+                    .foregroundStyle(Theme.accentGradient)
             }
 
             ProgressView(timerInterval: state.start...state.end, countsDown: false) {
@@ -90,7 +90,7 @@ private struct LockScreenView: View {
             } currentValueLabel: {
                 EmptyView()
             }
-            .tint(Theme.gold)
+            .tint(Theme.accent)
 
             HStack {
                 Text(state.start, style: .time)

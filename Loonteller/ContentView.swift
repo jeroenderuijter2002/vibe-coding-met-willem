@@ -27,7 +27,7 @@ struct ContentView: View {
             }
         }
         .environment(\.locale, language.locale)
-        .tint(Theme.gold)
+        .tint(Theme.accent)
         .preferredColorScheme(.dark)
         .onChange(of: workDay) { oldValue, newValue in
             // Was de vorige dag al klaar? Dan bewaren we hem (voor de geschiedenis).

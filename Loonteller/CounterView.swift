@@ -36,8 +36,8 @@ struct CounterView: View {
                         .foregroundStyle(.black)
                         .padding(.horizontal, 20)
                         .padding(.vertical, 12)
-                        .background(Theme.goldGradient, in: .capsule)
-                        .shadow(color: Theme.gold.opacity(0.6), radius: 16)
+                        .background(Theme.accentGradient, in: .capsule)
+                        .shadow(color: Theme.accent.opacity(0.6), radius: 16)
                         .transition(.move(edge: .top).combined(with: .scale).combined(with: .opacity))
                         .id(banner.id)
                 }
@@ -82,13 +82,13 @@ struct CounterView: View {
                     Text("Incl. BTW: \(workDay.earnedIncludingVAT(at: now), format: .currency(code: "EUR")) van \(workDay.totalIncludingVAT, format: .currency(code: "EUR"))")
                         .font(.subheadline.weight(.semibold))
                         .monospacedDigit()
-                        .foregroundStyle(Theme.goldLight)
+                        .foregroundStyle(Theme.accentLight)
                 }
 
                 if workDay.travelEarnings > 0 {
                     Text("incl. \(workDay.travelEarnings, format: .currency(code: "EUR")) reisvergoeding")
                         .font(.caption)
-                        .foregroundStyle(Theme.goldLight.opacity(0.8))
+                        .foregroundStyle(Theme.accentLight.opacity(0.8))
                 }
             }
 
@@ -111,7 +111,7 @@ struct CounterView: View {
                     .labelStyle(.iconOnly)
             }
             .buttonStyle(.bordered)
-            .tint(Theme.gold)
+            .tint(Theme.accent)
         }
         .padding(.horizontal, 24)
         .padding(.vertical, 12)
@@ -129,13 +129,13 @@ struct CounterView: View {
             } currentValueLabel: {
                 EmptyView()
             }
-            .tint(Theme.gold)
+            .tint(Theme.accent)
             HStack {
                 Text(workDay.start, style: .time)
                 Spacer()
                 Text(progress, format: .percent.precision(.fractionLength(0)))
                     .bold()
-                    .foregroundStyle(Theme.goldLight)
+                    .foregroundStyle(Theme.accentLight)
                 Spacer()
                 Text(workDay.effectiveEnd, style: .time)
             }
@@ -198,8 +198,8 @@ private struct LiveAmountView: View {
                  format: .currency(code: "EUR").precision(.fractionLength(decimals)))
                 .font(.system(size: 58, weight: .heavy, design: .rounded))
                 .monospacedDigit()   // cijfers even breed, zodat het bedrag niet heen en weer schuift
-                .foregroundStyle(Theme.goldGradient)
-                .shadow(color: Theme.gold.opacity(0.4), radius: 12)
+                .foregroundStyle(Theme.accentGradient)
+                .shadow(color: Theme.accent.opacity(0.4), radius: 12)
                 .minimumScaleFactor(0.4)
                 .lineLimit(1)
         }

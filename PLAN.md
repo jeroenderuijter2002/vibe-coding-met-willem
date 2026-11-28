@@ -70,6 +70,8 @@ Ideeën, nog niet gekozen:
 - [x] Money game-ontwerp: donker/goud thema, muntenstapels (1 munt = 1% van je dag) met vallende munten,
   mijlpalen (25/50/75/100%) met confetti. (Levels en streak 🔥 zijn weer weggehaald: eerst simpel houden.)
 - [x] App-icoon (gemaakt met `tools/make_icon.swift`) + widget en Live Activity in dezelfde goud/groen-stijl
+- [x] Nieuwe kleuren: middernachtblauw met koraal/koperen munten en perzik accenten (alleen kleuren, zelfde layout).
+  Alle kleuren staan in `Shared/Theme.swift`; icoon opnieuw gemaakt met `tools/make_icon.swift`.
 
 ---
 
