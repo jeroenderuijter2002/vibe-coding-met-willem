@@ -14,6 +14,8 @@
 		1B016084B84E80D8499E467A /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63755FE10AA85AF0B28DAC5B /* Level.swift */; };
 		267E35553AF1FE78D228CEBD /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63755FE10AA85AF0B28DAC5B /* Level.swift */; };
 		27B6C4653F1DA7460D895A75 /* ConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BE3EE202ED4C8C4E7302CE /* ConfettiView.swift */; };
+		870B3520AFED46312F54812A /* WeekSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE6402A972FCC94323AC23 /* WeekSchedule.swift */; };
+		109F750D3EB86EC175389F4B /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A3F3D9B0BC47F1769F7DA4 /* ScheduleView.swift */; };
 		297F65256FFCD484B8DB3C8C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 2FA486E8E4BE6FD34BFEC24F /* Localizable.xcstrings */; };
 		299B175DDFF68D7E3EF7F502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6709CB2F9FFFDA907B5389A5 /* Assets.xcassets */; };
 		2E7D543CEFB6CAB87EF23178 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196E9A1A2552BE73203BAAC4 /* Stats.swift */; };
@@ -80,6 +82,8 @@
 		88541652E963962CC23191F0 /* LoontellerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoontellerWidget.swift; sourceTree = "<group>"; };
 		891B2CC45A368FD6756AD6C7 /* WorkDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDay.swift; sourceTree = "<group>"; };
 		94BE3EE202ED4C8C4E7302CE /* ConfettiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiView.swift; sourceTree = "<group>"; };
+		17AE6402A972FCC94323AC23 /* WeekSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekSchedule.swift; sourceTree = "<group>"; };
+		55A3F3D9B0BC47F1769F7DA4 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		9D21AE0CAA67EA4DBF36BB4D /* WorkDayLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDayLiveActivity.swift; sourceTree = "<group>"; };
 		B6DAE13682DE168A16966D59 /* AppLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguage.swift; sourceTree = "<group>"; };
 		BFC5AD8E8A73691D663A1681 /* WorkDayActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDayActivityAttributes.swift; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 			children = (
 				6709CB2F9FFFDA907B5389A5 /* Assets.xcassets */,
 				94BE3EE202ED4C8C4E7302CE /* ConfettiView.swift */,
+				17AE6402A972FCC94323AC23 /* WeekSchedule.swift */,
+				55A3F3D9B0BC47F1769F7DA4 /* ScheduleView.swift */,
 				0CAD1F1DC5464FC4BBEE2F92 /* ContentView.swift */,
 				DE490C07B778DE9F83B57BC2 /* CounterView.swift */,
 				2D6CEFBCBB103BB2DD72C392 /* LiveActivityManager.swift */,
@@ -263,6 +269,8 @@
 				E1B3CD17E2127965AA4FF429 /* AppLanguage.swift in Sources */,
 				0CD4EF89BE9E71ECFDF191FC /* CoinStackView.swift in Sources */,
 				27B6C4653F1DA7460D895A75 /* ConfettiView.swift in Sources */,
+				870B3520AFED46312F54812A /* WeekSchedule.swift in Sources */,
+				109F750D3EB86EC175389F4B /* ScheduleView.swift in Sources */,
 				3DF4CFD3138154DECABBD986 /* ContentView.swift in Sources */,
 				174F3B8798A8E1039AFFD41F /* CounterView.swift in Sources */,
 				267E35553AF1FE78D228CEBD /* Level.swift in Sources */,

@@ -222,6 +222,16 @@
         }
       }
     },
+    "Gekopieerd!": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copied!"
+          }
+        }
+      }
+    },
     "Geldmachine": {
       "localizations": {
         "en": {
@@ -302,6 +312,16 @@
         }
       }
     },
+    "Ingevuld vanuit je weekrooster.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filled in from your weekly schedule."
+          }
+        }
+      }
+    },
     "Instellingen": {
       "localizations": {
         "en": {
@@ -368,6 +388,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Km per day (round trip)"
+          }
+        }
+      }
+    },
+    "Kopieer naar alle werkdagen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copy to all working days"
           }
         }
       }
@@ -451,6 +481,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "%@ until %@"
+          }
+        }
+      }
+    },
+    "Op een werkdag wordt het startscherm automatisch ingevuld met de tijden en reizen van die dag. Je tikt zelf op \"Start mijn dag\".": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "On a working day the start screen is filled in automatically with that day's times and travel. You still tap \"Start my day\" yourself."
           }
         }
       }
@@ -635,6 +675,16 @@
         }
       }
     },
+    "Vandaag ben je vrij volgens je weekrooster. Werk je toch? Vul je dag hierboven in.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "According to your weekly schedule you have the day off. Working anyway? Fill in your day above."
+          }
+        }
+      }
+    },
     "Vandaag in totaal: %@": {
       "localizations": {
         "en": {
@@ -675,6 +725,16 @@
         }
       }
     },
+    "Vrij": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Day off"
+          }
+        }
+      }
+    },
     "Waarvan onbetaald": {
       "localizations": {
         "en": {
@@ -685,12 +745,62 @@
         }
       }
     },
+    "Week": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Week"
+          }
+        }
+      }
+    },
+    "Weekrooster": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekly schedule"
+          }
+        }
+      }
+    },
+    "Weekrooster gebruiken": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Use weekly schedule"
+          }
+        }
+      }
+    },
+    "Werkdag": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Working day"
+          }
+        }
+      }
+    },
     "Werktijden": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Working hours"
+          }
+        }
+      }
+    },
+    "Zet deze tijden en reizen ook op je andere werkdagen.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apply these times and travel to your other working days too."
           }
         }
       }

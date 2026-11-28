@@ -20,8 +20,7 @@ struct ContentView: View {
                     self.workDay = nil
                 }
             } else {
-                // Gegevens van een eerdere dag worden naar vandaag verplaatst.
-                StartDayView(initial: lastInput?.movedToDay()) { newDay in
+                StartDayView(initial: startDayInitial()) { newDay in
                     workDay = newDay
                     lastInput = newDay
                 }
@@ -63,6 +62,20 @@ struct ContentView: View {
     private struct LiveUpdateKey: Equatable {
         let day: WorkDay?
         let isActive: Bool
+    }
+
+    /// Waarmee het startscherm wordt ingevuld:
+    /// 1. Al een dag ingevuld vandaag (bijv. na "Aanpassen")? Dan die.
+    /// 2. Werkdag volgens je weekrooster? Tijden en reizen uit het rooster, loon/BTW/tarieven van je vorige dag.
+    /// 3. Anders: je vorige dag, verplaatst naar vandaag.
+    private func startDayInitial(now: Date = Date()) -> WorkDay? {
+        if let lastInput, Calendar.current.isDate(lastInput.start, inSameDayAs: now) {
+            return lastInput
+        }
+        let previous = lastInput?.movedToDay(of: now)
+        guard let scheduled = WeekSchedule.saved.workDay(on: now) else { return previous }
+        let base = previous ?? WorkDay(payType: .daily, amount: 0, start: now, end: now, breakMinutes: 0)
+        return scheduled.applied(to: base, on: now)
     }
 
     /// Haalt de opgeslagen werkdag op, maar alleen als die nog bij vandaag hoort.

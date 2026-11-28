@@ -51,7 +51,8 @@ Een iPhone-app waarmee je live ziet hoeveel geld je vandaag al verdiend hebt, me
 
 ## Later (de "leuke" versie)
 Ideeën, nog niet gekozen:
-- Rooster per dag van de week, zodat je niet elke dag opnieuw hoeft in te vullen
+- [x] Weekrooster: per weekdag werkdag ja/nee, tijden, pauze en reizen. Vult het startscherm in
+  (je tikt zelf op Start). Loon, BTW en tarieven komen van je vorige dag. Instellingen → Weekrooster.
 - Pauze op een vast tijdstip (de teller staat dan stil tijdens de pauze)
 - [x] "Start nu"-knop: dag direct laten beginnen
 - [x] Eén "Start mijn dag"-knop die je ingevulde begintijd volgt: start je later (bijv. 7:30 i.p.v. 7:00),

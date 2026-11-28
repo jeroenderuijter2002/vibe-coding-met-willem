@@ -18,11 +18,15 @@ struct StartDayView: View {
     @State private var unpaidTravelMinutes: Int
     @State private var vatPercent: Int
 
+    /// Het weekrooster; verandert het, dan nemen we de tijden en reizen van vandaag meteen over.
+    @AppStorage(WeekSchedule.storageKey, store: WorkDayStore.sharedDefaults)
+    private var scheduleData = Data()
+
     /// - Parameter initial: eerder ingevulde gegevens (bij "Aanpassen"), of `nil` voor standaardwaarden.
     init(initial: WorkDay? = nil, onStart: @escaping (WorkDay) -> Void) {
         self.onStart = onStart
         _payType = State(initialValue: initial?.payType ?? .daily)
-        _amount = State(initialValue: initial?.amount)
+        _amount = State(initialValue: initial.map(\.amount).flatMap { $0 > 0 ? $0 : nil })
         _start = State(initialValue: initial?.start ?? Self.today(hour: 7))
         _end = State(initialValue: initial?.end ?? Self.today(hour: 16))
         _breakMinutes = State(initialValue: initial?.breakMinutes ?? 30)
@@ -68,7 +72,7 @@ struct StartDayView: View {
                     }
                 }
 
-                Section("Werktijden") {
+                Section {
                     DatePicker("Begintijd", selection: $start, displayedComponents: .hourAndMinute)
                     DatePicker("Eindtijd", selection: $end, displayedComponents: .hourAndMinute)
                     Stepper(value: $breakMinutes, in: 0...240, step: 5) {
@@ -79,6 +83,10 @@ struct StartDayView: View {
                                 .foregroundStyle(.secondary)
                         }
                     }
+                } header: {
+                    Text("Werktijden")
+                } footer: {
+                    scheduleNote
                 }
 
                 Section {
@@ -163,12 +171,21 @@ struct StartDayView: View {
                 .listRowSeparator(.hidden)
 
                 Section("Instellingen") {
+                    NavigationLink {
+                        ScheduleView()
+                    } label: {
+                        Label("Weekrooster", systemImage: "calendar")
+                    }
                     LanguagePicker()
                     DecimalsPicker()
                 }
             }
             .navigationTitle("Start mijn dag")
             .scrollDismissesKeyboard(.immediately)
+            .onChange(of: scheduleData) {
+                // Rooster gewijzigd: tijden en reizen van vandaag overnemen.
+                if let today = WeekSchedule(data: scheduleData).workDay() { apply(today) }
+            }
             .scrollContentBackground(.hidden)
             .background(Theme.background.ignoresSafeArea())
             .toolbar {
@@ -221,6 +238,28 @@ struct StartDayView: View {
             }
             Text("\"Begin nu\" negeert je begintijd en begint direct, voor \(Duration.seconds(workDay.shiftDuration), format: .units(allowed: [.hours, .minutes], width: .wide)).")
         }
+    }
+
+    /// Uitleg onder de werktijden als het weekrooster aan staat.
+    @ViewBuilder
+    private var scheduleNote: some View {
+        let schedule = WeekSchedule(data: scheduleData)
+        if schedule.workDay() != nil {
+            Label("Ingevuld vanuit je weekrooster.", systemImage: "calendar")
+        } else if schedule.isDayOff() {
+            Label("Vandaag ben je vrij volgens je weekrooster. Werk je toch? Vul je dag hierboven in.", systemImage: "calendar")
+        }
+    }
+
+    /// Neemt de tijden en reizen van een roosterdag over in het formulier.
+    private func apply(_ day: DaySchedule) {
+        let now = Date()
+        start = DaySchedule.date(day.startMinutes, on: now)
+        end = DaySchedule.date(day.endMinutes, on: now)
+        breakMinutes = day.breakMinutes
+        kilometers = day.kilometers > 0 ? day.kilometers : nil
+        travelMinutes = day.travelMinutes
+        unpaidTravelMinutes = day.unpaidTravelMinutes
     }
 
     /// Een regel met een naam en een invulveld voor een bedrag (of getal) rechts.
