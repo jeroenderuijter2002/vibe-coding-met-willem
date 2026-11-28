@@ -1,0 +1,529 @@
+{
+  "sourceLanguage": "nl",
+  "version": "1.0",
+  "strings": {
+    "\"Start nu\" begint direct en duurt %@.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\"Start now\" starts right away and lasts %@."
+          }
+        }
+      }
+    },
+    "%lld min": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld min"
+          }
+        }
+      }
+    },
+    "%lld munten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld coins"
+          }
+        }
+      }
+    },
+    "0,00": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "0.00"
+          }
+        }
+      }
+    },
+    "1 munt = %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 coin = %@"
+          }
+        }
+      }
+    },
+    "Aanpassen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Edit"
+          }
+        }
+      }
+    },
+    "Baas": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Boss"
+          }
+        }
+      }
+    },
+    "Begint om %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Starts at %@"
+          }
+        }
+      }
+    },
+    "Begintijd": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start time"
+          }
+        }
+      }
+    },
+    "Bijna daar! 🚀": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Almost there! 🚀"
+          }
+        }
+      }
+    },
+    "Dag voltooid! 🏆": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Day complete! 🏆"
+          }
+        }
+      }
+    },
+    "Dagloon": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daily wage"
+          }
+        }
+      }
+    },
+    "Decimalen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Decimal places"
+          }
+        }
+      }
+    },
+    "Eindtijd": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "End time"
+          }
+        }
+      }
+    },
+    "Geldmachine": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Money machine"
+          }
+        }
+      }
+    },
+    "Goudhaantje": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Golden boy"
+          }
+        }
+      }
+    },
+    "Halverwege! 🔥": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Halfway there! 🔥"
+          }
+        }
+      }
+    },
+    "Harde werker": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hard worker"
+          }
+        }
+      }
+    },
+    "Hoogste level bereikt!": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Highest level reached!"
+          }
+        }
+      }
+    },
+    "Instellingen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
+          }
+        }
+      }
+    },
+    "Je dag is nog niet begonnen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your day hasn't started yet"
+          }
+        }
+      }
+    },
+    "Je verdient vandaag": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You'll earn today"
+          }
+        }
+      }
+    },
+    "Klaar voor vandaag! 🎉": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Done for today! 🎉"
+          }
+        }
+      }
+    },
+    "Kwart binnen! 💪": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A quarter done! 💪"
+          }
+        }
+      }
+    },
+    "Let op: je ingevulde eindtijd is al voorbij. Met \"Start met ingevulde tijden\" staat de teller direct op het volle bedrag.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Note: your end time has already passed. With \"Start with entered times\" the counter will show the full amount right away."
+          }
+        }
+      }
+    },
+    "Level up! %@ %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Level up! %@ %@"
+          }
+        }
+      }
+    },
+    "Loon": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pay"
+          }
+        }
+      }
+    },
+    "Loonteller": {
+      "shouldTranslate": false
+    },
+    "Miljonair in wording": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Millionaire in the making"
+          }
+        }
+      }
+    },
+    "Nog %@ te gaan": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ left"
+          }
+        }
+      }
+    },
+    "Nog %@ tot %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ until %@"
+          }
+        }
+      }
+    },
+    "Pauze": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Break"
+          }
+        }
+      }
+    },
+    "Per dag": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Per day"
+          }
+        }
+      }
+    },
+    "Per uur": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Per hour"
+          }
+        }
+      }
+    },
+    "Sjouwer": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hauler"
+          }
+        }
+      }
+    },
+    "Soort loon": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pay type"
+          }
+        }
+      }
+    },
+    "Stagiair": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Intern"
+          }
+        }
+      }
+    },
+    "Start je dag in de app": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start your day in the app"
+          }
+        }
+      }
+    },
+    "Start met ingevulde tijden": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start with entered times"
+          }
+        }
+      }
+    },
+    "Start mijn dag": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start my day"
+          }
+        }
+      }
+    },
+    "Start nu": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start now"
+          }
+        }
+      }
+    },
+    "Systeem": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "System"
+          }
+        }
+      }
+    },
+    "Taal": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Language"
+          }
+        }
+      }
+    },
+    "Totaal verdiend: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Total earned: %@"
+          }
+        }
+      }
+    },
+    "Uurloon": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hourly wage"
+          }
+        }
+      }
+    },
+    "Vakman": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Craftsman"
+          }
+        }
+      }
+    },
+    "Vandaag in totaal: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Total today: %@"
+          }
+        }
+      }
+    },
+    "Verdiend tot nu toe": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Earned so far"
+          }
+        }
+      }
+    },
+    "Verdiend tot nu toe:": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Earned so far:"
+          }
+        }
+      }
+    },
+    "Werktijden": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Working hours"
+          }
+        }
+      }
+    },
+    "Zie hoeveel je vandaag al verdiend hebt.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "See how much you've earned today."
+          }
+        }
+      }
+    },
+    "reeks": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "streak"
+          }
+        }
+      }
+    },
+    "van %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "of %@"
+          }
+        }
+      }
+    }
+  }
+}
