@@ -142,6 +142,16 @@
         }
       }
     },
+    "Betaald: %@ van je reistijd.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paid: %@ of your travel time."
+          }
+        }
+      }
+    },
     "Bijna daar! 🚀": {
       "localizations": {
         "en": {
@@ -661,6 +671,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Allowance per km"
+          }
+        }
+      }
+    },
+    "Waarvan onbetaald": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Of which unpaid"
           }
         }
       }

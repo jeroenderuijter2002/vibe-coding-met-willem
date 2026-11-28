@@ -29,6 +29,8 @@ struct WorkDay: Codable, Equatable {
     var travelMinutes: Int = 0
     /// Vergoeding per uur reistijd. `nil` = je uurloon (bij dagloon: niets).
     var travelHourlyRate: Double? = nil
+    /// Hoeveel minuten van de reistijd per dag níet betaald worden (bijv. het eerste uur).
+    var unpaidTravelMinutes: Int = 0
 
     /// Standaard kilometervergoeding (belastingvrij maximum).
     static let defaultKilometerRate = 0.23
@@ -77,9 +79,14 @@ struct WorkDay: Codable, Equatable {
         travelHourlyRate ?? (payType == .hourly ? amount : 0)
     }
 
+    /// Reistijd waarvoor je betaald krijgt: je reistijd min het onbetaalde deel.
+    var paidTravelMinutes: Int {
+        max(0, travelMinutes - unpaidTravelMinutes)
+    }
+
     /// Betaalde reistijd voor vandaag.
     var travelTimePay: Double {
-        Double(travelMinutes) / 60 * effectiveTravelHourlyRate
+        Double(paidTravelMinutes) / 60 * effectiveTravelHourlyRate
     }
 
     /// Alle reisvergoeding samen. Die staat in één keer op de teller zodra je dag begint.
@@ -173,6 +180,7 @@ extension WorkDay {
             kilometerRate: try c.decodeIfPresent(Double.self, forKey: .kilometerRate) ?? WorkDay.defaultKilometerRate,
             travelMinutes: try c.decodeIfPresent(Int.self, forKey: .travelMinutes) ?? 0,
             travelHourlyRate: try c.decodeIfPresent(Double.self, forKey: .travelHourlyRate),
+            unpaidTravelMinutes: try c.decodeIfPresent(Int.self, forKey: .unpaidTravelMinutes) ?? 0,
             vatPercent: try c.decodeIfPresent(Int.self, forKey: .vatPercent) ?? 21
         )
     }

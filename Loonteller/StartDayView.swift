@@ -15,6 +15,7 @@ struct StartDayView: View {
     @State private var kilometerRate: Double?
     @State private var travelMinutes: Int
     @State private var travelHourlyRate: Double?
+    @State private var unpaidTravelMinutes: Int
     @State private var vatPercent: Int
 
     /// - Parameter initial: eerder ingevulde gegevens (bij "Aanpassen"), of `nil` voor standaardwaarden.
@@ -29,6 +30,7 @@ struct StartDayView: View {
         _kilometerRate = State(initialValue: initial?.kilometerRate ?? WorkDay.defaultKilometerRate)
         _travelMinutes = State(initialValue: initial?.travelMinutes ?? 0)
         _travelHourlyRate = State(initialValue: initial?.travelHourlyRate)
+        _unpaidTravelMinutes = State(initialValue: initial?.unpaidTravelMinutes ?? 0)
         _vatPercent = State(initialValue: initial?.vatPercent ?? 21)
     }
 
@@ -84,13 +86,19 @@ struct StartDayView: View {
                     euroField("Vergoeding per km", value: $kilometerRate, fractionDigits: 3)
                     DurationPickerRow(title: "Reistijd (heen en terug)", minutes: $travelMinutes)
                     if travelMinutes > 0 {
+                        DurationPickerRow(title: "Waarvan onbetaald", minutes: $unpaidTravelMinutes)
                         euroField("Reistijd per uur", value: $travelHourlyRate,
                                   placeholder: payType == .hourly ? "Uurloon" : "0,00")
                     }
                 } header: {
                     Text("Reizen")
                 } footer: {
-                    Text("De reisvergoeding staat in één keer op de teller zodra je dag begint.")
+                    VStack(alignment: .leading, spacing: 6) {
+                        if travelMinutes > 0 && unpaidTravelMinutes > 0 {
+                            Text("Betaald: \(Duration.seconds(max(0, travelMinutes - unpaidTravelMinutes) * 60), format: .units(allowed: [.hours, .minutes], width: .abbreviated)) van je reistijd.")
+                        }
+                        Text("De reisvergoeding staat in één keer op de teller zodra je dag begint.")
+                    }
                 }
 
                 if let workDay {
@@ -251,6 +259,7 @@ struct StartDayView: View {
                        kilometerRate: max(0, kilometerRate ?? 0),
                        travelMinutes: travelMinutes,
                        travelHourlyRate: travelHourlyRate.map { max(0, $0) },
+                       unpaidTravelMinutes: unpaidTravelMinutes,
                        vatPercent: vatPercent)
     }
 

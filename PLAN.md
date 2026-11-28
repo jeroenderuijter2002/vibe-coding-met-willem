@@ -63,6 +63,7 @@ Ideeën, nog niet gekozen:
 - [x] Reistijd instellen met een tijdwiel (uren + minuten) i.p.v. +/- per 5 minuten
 - [x] Voor zzp'ers: tarief is ex BTW, kies 21% / 9% / 0%. Teller toont groot ex BTW en klein incl BTW
   (BTW over loon én reisvergoeding). Levels en streak tellen met ex BTW.
+- [x] Onbetaalde reistijd: bijv. het eerste uur reistijd per dag wordt niet betaald
 - Geschiedenis: verdiend per week of maand
 - Netto in plaats van bruto
 - [x] Money game-ontwerp: donker/goud thema, muntenstapels (1 munt = 1% van je dag) met vallende munten,
