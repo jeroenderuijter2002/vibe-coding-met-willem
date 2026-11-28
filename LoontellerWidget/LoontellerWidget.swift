@@ -122,7 +122,7 @@ struct LoontellerWidgetEntryView: View {
 
     private var coins: Int {
         guard let day = entry.day else { return 0 }
-        return Int(day.progress(at: entry.date) * 100)
+        return Int(day.earnedFraction(at: entry.date) * 100)
     }
 
     private func amount(size: CGFloat) -> some View {

@@ -54,8 +54,12 @@ Ideeën, nog niet gekozen:
 - Rooster per dag van de week, zodat je niet elke dag opnieuw hoeft in te vullen
 - Pauze op een vast tijdstip (de teller staat dan stil tijdens de pauze)
 - [x] "Start nu"-knop: dag direct laten beginnen
+- [x] Eén "Start mijn dag"-knop die je ingevulde begintijd volgt: start je later (bijv. 7:30 i.p.v. 7:00),
+  dan telt de teller terug vanaf 7:00 en loopt hij gelijk met je echte werkdag. "Begin nu" blijft als uitzondering.
 - [x] Live Activity op het vergrendelscherm + Dynamic Island (balk en afteller lopen live; bedrag kan niet live)
 - [x] Widget met live voortgangsbalk en afteller, ook in middelgroot formaat
+- [x] Reizen: kilometervergoeding (km × tarief, standaard €0,23) en betaalde reistijd (eigen uurtarief, of je uurloon).
+  Staat in één keer op de teller zodra je dag begint; wordt onthouden voor de volgende dag.
 - Geschiedenis: verdiend per week of maand
 - Netto in plaats van bruto
 - [x] Money game-ontwerp: donker/goud thema, muntenstapels (1 munt = 1% van je dag) met vallende munten,

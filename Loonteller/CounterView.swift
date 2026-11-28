@@ -64,7 +64,8 @@ struct CounterView: View {
     private func content(at now: Date) -> some View {
         let progress = workDay.progress(at: now)
         let earned = workDay.earned(at: now)
-        let coins = Int(progress * Double(totalCoins))
+        // Munten volgen het geld, dus de reisvergoeding ligt er bij het begin al als munten.
+        let coins = Int(workDay.earnedFraction(at: now) * Double(totalCoins))
         let milestone = Int(progress * 4)            // 0...4 → 25%, 50%, 75%, 100%
         let lifetime = earlierEarnings + earned
         let level = Level.current(for: lifetime)
@@ -85,6 +86,12 @@ struct CounterView: View {
                 Text("van \(workDay.totalEarnings, format: .currency(code: "EUR"))")
                     .font(.subheadline)
                     .foregroundStyle(.white.opacity(0.6))
+
+                if workDay.travelEarnings > 0 {
+                    Text("incl. \(workDay.travelEarnings, format: .currency(code: "EUR")) reisvergoeding")
+                        .font(.caption)
+                        .foregroundStyle(Theme.goldLight.opacity(0.8))
+                }
             }
 
             // Muntenstapels

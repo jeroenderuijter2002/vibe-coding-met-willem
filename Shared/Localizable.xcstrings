@@ -2,12 +2,12 @@
   "sourceLanguage": "nl",
   "version": "1.0",
   "strings": {
-    "\"Start nu\" begint direct en duurt %@.": {
+    "\"Begin nu\" negeert je begintijd en begint direct, voor %@.": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "\"Start now\" starts right away and lasts %@."
+            "value": "\"Begin now\" ignores your start time and starts right away, for %@."
           }
         }
       }
@@ -28,6 +28,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "%lld coins"
+          }
+        }
+      }
+    },
+    "0": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "0"
           }
         }
       }
@@ -68,6 +78,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Boss"
+          }
+        }
+      }
+    },
+    "Begin nu": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Begin now"
           }
         }
       }
@@ -118,6 +138,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "Daily wage"
+          }
+        }
+      }
+    },
+    "De reisvergoeding staat in één keer op de teller zodra je dag begint.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your travel allowance is added to the counter all at once as soon as your day starts."
+          }
+        }
+      }
+    },
+    "De teller begint om %@ en stopt om %@.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The counter starts at %1$@ and stops at %2$@."
           }
         }
       }
@@ -202,6 +242,16 @@
         }
       }
     },
+    "Je bent om %@ begonnen. De teller telt vanaf dat moment, dus wat je sindsdien verdiend hebt staat er meteen.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You started at %@. The counter counts from that moment, so what you have earned since then shows up right away."
+          }
+        }
+      }
+    },
     "Je dag is nog niet begonnen": {
       "localizations": {
         "en": {
@@ -222,12 +272,32 @@
         }
       }
     },
+    "Kilometervergoeding": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mileage allowance"
+          }
+        }
+      }
+    },
     "Klaar voor vandaag! 🎉": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Done for today! 🎉"
+          }
+        }
+      }
+    },
+    "Km per dag (heen en terug)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Km per day (round trip)"
           }
         }
       }
@@ -242,12 +312,12 @@
         }
       }
     },
-    "Let op: je ingevulde eindtijd is al voorbij. Met \"Start met ingevulde tijden\" staat de teller direct op het volle bedrag.": {
+    "Let op: je eindtijd is al voorbij, dus de teller staat direct op het volle bedrag. Begin je nu pas? Tik dan op \"Begin nu\".": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Note: your end time has already passed. With \"Start with entered times\" the counter will show the full amount right away."
+            "value": "Note: your end time has already passed, so the counter will show the full amount right away. Only starting now? Tap \"Begin now\"."
           }
         }
       }
@@ -335,6 +405,46 @@
         }
       }
     },
+    "Reistijd": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Travel time"
+          }
+        }
+      }
+    },
+    "Reistijd (heen en terug)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Travel time (round trip)"
+          }
+        }
+      }
+    },
+    "Reistijd per uur": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Travel time per hour"
+          }
+        }
+      }
+    },
+    "Reizen": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Travel"
+          }
+        }
+      }
+    },
     "Sjouwer": {
       "localizations": {
         "en": {
@@ -375,32 +485,12 @@
         }
       }
     },
-    "Start met ingevulde tijden": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Start with entered times"
-          }
-        }
-      }
-    },
     "Start mijn dag": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Start my day"
-          }
-        }
-      }
-    },
-    "Start nu": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Start now"
           }
         }
       }
@@ -485,6 +575,16 @@
         }
       }
     },
+    "Vergoeding per km": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Allowance per km"
+          }
+        }
+      }
+    },
     "Werktijden": {
       "localizations": {
         "en": {
@@ -501,6 +601,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "See how much you've earned today."
+          }
+        }
+      }
+    },
+    "incl. %@ reisvergoeding": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "incl. %@ travel allowance"
           }
         }
       }
