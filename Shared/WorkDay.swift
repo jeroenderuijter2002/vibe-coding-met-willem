@@ -33,6 +33,13 @@ struct WorkDay: Codable, Equatable {
     /// Standaard kilometervergoeding (belastingvrij maximum).
     static let defaultKilometerRate = 0.23
 
+    // MARK: BTW (voor zzp'ers: alle bedragen hierboven zijn ex BTW)
+
+    /// BTW-percentage dat over alles (loon + reisvergoeding) komt: 21, 9 of 0.
+    var vatPercent: Int = 21
+
+    static let vatOptions = [21, 9, 0]
+
     // MARK: - Tijden
 
     /// De eindtijd, eventueel een dag later als je over middernacht werkt.
@@ -100,6 +107,20 @@ struct WorkDay: Codable, Equatable {
         return travelEarnings + wageEarnings * progress(at: date)
     }
 
+    /// Factor om van ex naar incl BTW te gaan, bijv. 1,21.
+    var vatMultiplier: Double { 1 + Double(vatPercent) / 100 }
+
+    /// De BTW over je hele dag.
+    var totalVAT: Double { totalEarnings * Double(vatPercent) / 100 }
+
+    /// Je dagtotaal incl BTW (wat er op de factuur komt).
+    var totalIncludingVAT: Double { totalEarnings * vatMultiplier }
+
+    /// Hoeveel je op moment `date` verdiend hebt, incl BTW.
+    func earnedIncludingVAT(at date: Date) -> Double {
+        earned(at: date) * vatMultiplier
+    }
+
     /// Welk deel van het dagtotaal je al hebt (0...1). Hiermee tellen we de munten.
     func earnedFraction(at date: Date) -> Double {
         guard totalEarnings > 0 else { return progress(at: date) }
@@ -151,7 +172,8 @@ extension WorkDay {
             kilometers: try c.decodeIfPresent(Double.self, forKey: .kilometers) ?? 0,
             kilometerRate: try c.decodeIfPresent(Double.self, forKey: .kilometerRate) ?? WorkDay.defaultKilometerRate,
             travelMinutes: try c.decodeIfPresent(Int.self, forKey: .travelMinutes) ?? 0,
-            travelHourlyRate: try c.decodeIfPresent(Double.self, forKey: .travelHourlyRate)
+            travelHourlyRate: try c.decodeIfPresent(Double.self, forKey: .travelHourlyRate),
+            vatPercent: try c.decodeIfPresent(Int.self, forKey: .vatPercent) ?? 21
         )
     }
 }

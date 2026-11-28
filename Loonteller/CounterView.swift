@@ -83,9 +83,16 @@ struct CounterView: View {
 
                 LiveAmountView(workDay: workDay)
 
-                Text("van \(workDay.totalEarnings, format: .currency(code: "EUR"))")
+                Text("van \(workDay.totalEarnings, format: .currency(code: "EUR")) ex BTW")
                     .font(.subheadline)
                     .foregroundStyle(.white.opacity(0.6))
+
+                if workDay.vatPercent > 0 {
+                    Text("Incl. BTW: \(workDay.earnedIncludingVAT(at: now), format: .currency(code: "EUR")) van \(workDay.totalIncludingVAT, format: .currency(code: "EUR"))")
+                        .font(.subheadline.weight(.semibold))
+                        .monospacedDigit()
+                        .foregroundStyle(Theme.goldLight)
+                }
 
                 if workDay.travelEarnings > 0 {
                     Text("incl. \(workDay.travelEarnings, format: .currency(code: "EUR")) reisvergoeding")

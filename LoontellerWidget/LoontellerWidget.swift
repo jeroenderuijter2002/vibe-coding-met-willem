@@ -167,9 +167,14 @@ struct LoontellerWidgetEntryView: View {
                 label
                 amount(size: 32)
                 if let day = entry.day {
-                    Text("van \(day.totalEarnings, format: .currency(code: "EUR"))")
+                    Text("van \(day.totalEarnings, format: .currency(code: "EUR")) ex BTW")
                         .font(.caption)
                         .foregroundStyle(.white.opacity(0.6))
+                    if day.vatPercent > 0 {
+                        Text("Incl. BTW: \(entry.earned * day.vatMultiplier, format: .currency(code: "EUR"))")
+                            .font(.caption.weight(.semibold))
+                            .foregroundStyle(Theme.goldLight)
+                    }
                     Spacer(minLength: 0)
                     LiveProgress(start: day.start, end: day.effectiveEnd, now: entry.date)
                 } else {

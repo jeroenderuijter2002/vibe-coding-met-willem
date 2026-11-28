@@ -32,6 +32,16 @@
         }
       }
     },
+    "%lld uur": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld hr"
+          }
+        }
+      }
+    },
     "0": {
       "localizations": {
         "en": {
@@ -68,6 +78,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "Edit"
+          }
+        }
+      }
+    },
+    "BTW": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "VAT"
+          }
+        }
+      }
+    },
+    "BTW %lld%%": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "VAT %lld%%"
           }
         }
       }
@@ -232,6 +262,36 @@
         }
       }
     },
+    "Incl. BTW": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Incl. VAT"
+          }
+        }
+      }
+    },
+    "Incl. BTW: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Incl. VAT: %@"
+          }
+        }
+      }
+    },
+    "Incl. BTW: %@ van %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Incl. VAT: %1$@ of %2$@"
+          }
+        }
+      }
+    },
     "Instellingen": {
       "localizations": {
         "en": {
@@ -262,12 +322,12 @@
         }
       }
     },
-    "Je verdient vandaag": {
+    "Je verdient vandaag (ex BTW)": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "You'll earn today"
+            "value": "You earn today (excl. VAT)"
           }
         }
       }
@@ -355,6 +415,16 @@
         }
       }
     },
+    "Minuten": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Minutes"
+          }
+        }
+      }
+    },
     "Nog %@ te gaan": {
       "localizations": {
         "en": {
@@ -385,22 +455,22 @@
         }
       }
     },
-    "Per dag": {
+    "Per dag (ex BTW)": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Per day"
+            "value": "Per day (excl. VAT)"
           }
         }
       }
     },
-    "Per uur": {
+    "Per uur (ex BTW)": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Per hour"
+            "value": "Per hour (excl. VAT)"
           }
         }
       }
@@ -525,6 +595,16 @@
         }
       }
     },
+    "Uren": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hours"
+          }
+        }
+      }
+    },
     "Uurloon": {
       "localizations": {
         "en": {
@@ -625,12 +705,12 @@
         }
       }
     },
-    "van %@": {
+    "van %@ ex BTW": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "of %@"
+            "value": "of %@ excl. VAT"
           }
         }
       }

@@ -15,6 +15,7 @@ struct StartDayView: View {
     @State private var kilometerRate: Double?
     @State private var travelMinutes: Int
     @State private var travelHourlyRate: Double?
+    @State private var vatPercent: Int
 
     /// - Parameter initial: eerder ingevulde gegevens (bij "Aanpassen"), of `nil` voor standaardwaarden.
     init(initial: WorkDay? = nil, onStart: @escaping (WorkDay) -> Void) {
@@ -28,6 +29,7 @@ struct StartDayView: View {
         _kilometerRate = State(initialValue: initial?.kilometerRate ?? WorkDay.defaultKilometerRate)
         _travelMinutes = State(initialValue: initial?.travelMinutes ?? 0)
         _travelHourlyRate = State(initialValue: initial?.travelHourlyRate)
+        _vatPercent = State(initialValue: initial?.vatPercent ?? 21)
     }
 
     var body: some View {
@@ -46,7 +48,7 @@ struct StartDayView: View {
                     .pickerStyle(.segmented)
 
                     HStack {
-                        if payType == .daily { Text("Per dag") } else { Text("Per uur") }
+                        if payType == .daily { Text("Per dag (ex BTW)") } else { Text("Per uur (ex BTW)") }
                         Spacer()
                         Text(verbatim: "€")
                             .foregroundStyle(.secondary)
@@ -54,6 +56,13 @@ struct StartDayView: View {
                             .keyboardType(.decimalPad)
                             .multilineTextAlignment(.trailing)
                             .frame(maxWidth: 120)
+                    }
+
+                    // BTW komt bovenop alles: loon én reisvergoeding.
+                    Picker("BTW", selection: $vatPercent) {
+                        ForEach(WorkDay.vatOptions, id: \.self) { percent in
+                            Text(verbatim: "\(percent)%").tag(percent)
+                        }
                     }
                 }
 
@@ -73,14 +82,7 @@ struct StartDayView: View {
                 Section {
                     euroField("Km per dag (heen en terug)", value: $kilometers, showEuro: false, placeholder: "0")
                     euroField("Vergoeding per km", value: $kilometerRate, fractionDigits: 3)
-                    Stepper(value: $travelMinutes, in: 0...480, step: 5) {
-                        HStack {
-                            Text("Reistijd (heen en terug)")
-                            Spacer()
-                            Text("\(travelMinutes) min")
-                                .foregroundStyle(.secondary)
-                        }
-                    }
+                    DurationPickerRow(title: "Reistijd (heen en terug)", minutes: $travelMinutes)
                     if travelMinutes > 0 {
                         euroField("Reistijd per uur", value: $travelHourlyRate,
                                   placeholder: payType == .hourly ? "Uurloon" : "0,00")
@@ -103,10 +105,19 @@ struct StartDayView: View {
                             }
                         }
                         HStack {
-                            Text("Je verdient vandaag")
+                            Text("Je verdient vandaag (ex BTW)")
                             Spacer()
                             Text(workDay.totalEarnings, format: .currency(code: "EUR"))
                                 .bold()
+                        }
+                        if workDay.vatPercent > 0 {
+                            breakdownRow("BTW \(workDay.vatPercent)%", workDay.totalVAT)
+                            HStack {
+                                Text("Incl. BTW")
+                                Spacer()
+                                Text(workDay.totalIncludingVAT, format: .currency(code: "EUR"))
+                            }
+                            .foregroundStyle(Theme.goldLight)
                         }
                     }
                 }
@@ -239,12 +250,64 @@ struct StartDayView: View {
                        kilometers: max(0, kilometers ?? 0),
                        kilometerRate: max(0, kilometerRate ?? 0),
                        travelMinutes: travelMinutes,
-                       travelHourlyRate: travelHourlyRate.map { max(0, $0) })
+                       travelHourlyRate: travelHourlyRate.map { max(0, $0) },
+                       vatPercent: vatPercent)
     }
 
     /// Vandaag op een bepaald heel uur, bijvoorbeeld 07:00.
     private static func today(hour: Int) -> Date {
         Calendar.current.date(bySettingHour: hour, minute: 0, second: 0, of: Date()) ?? Date()
+    }
+}
+
+/// Een regel met een tijdsduur (bijv. "2 uur, 15 min"). Tik erop en er klappen twee wieltjes open:
+/// uren en minuten (per 5). Zo stel je snel een lange duur in, zonder tig keer op + te tikken.
+struct DurationPickerRow: View {
+    let title: LocalizedStringKey
+    @Binding var minutes: Int
+    var maxHours = 8
+
+    @State private var isExpanded = false
+
+    var body: some View {
+        Button {
+            withAnimation { isExpanded.toggle() }
+        } label: {
+            HStack {
+                Text(title)
+                    .foregroundStyle(.primary)
+                Spacer()
+                Text(Duration.seconds(minutes * 60), format: .units(allowed: [.hours, .minutes], width: .abbreviated))
+                    .foregroundStyle(isExpanded ? Theme.gold : .secondary)
+            }
+        }
+
+        if isExpanded {
+            HStack(spacing: 0) {
+                Picker("Uren", selection: hours) {
+                    ForEach(0...maxHours, id: \.self) { Text("\($0) uur").tag($0) }
+                }
+                .frame(maxWidth: .infinity)
+                .clipped()
+
+                Picker("Minuten", selection: minutesPart) {
+                    ForEach(Array(stride(from: 0, to: 60, by: 5)), id: \.self) { Text("\($0) min").tag($0) }
+                }
+                .frame(maxWidth: .infinity)
+                .clipped()
+            }
+            .pickerStyle(.wheel)
+            .labelsHidden()
+            .frame(height: 150)
+        }
+    }
+
+    private var hours: Binding<Int> {
+        Binding(get: { minutes / 60 }, set: { minutes = $0 * 60 + minutes % 60 })
+    }
+
+    private var minutesPart: Binding<Int> {
+        Binding(get: { minutes % 60 / 5 * 5 }, set: { minutes = minutes / 60 * 60 + $0 })
     }
 }
 

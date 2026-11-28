@@ -60,6 +60,9 @@ Ideeën, nog niet gekozen:
 - [x] Widget met live voortgangsbalk en afteller, ook in middelgroot formaat
 - [x] Reizen: kilometervergoeding (km × tarief, standaard €0,23) en betaalde reistijd (eigen uurtarief, of je uurloon).
   Staat in één keer op de teller zodra je dag begint; wordt onthouden voor de volgende dag.
+- [x] Reistijd instellen met een tijdwiel (uren + minuten) i.p.v. +/- per 5 minuten
+- [x] Voor zzp'ers: tarief is ex BTW, kies 21% / 9% / 0%. Teller toont groot ex BTW en klein incl BTW
+  (BTW over loon én reisvergoeding). Levels en streak tellen met ex BTW.
 - Geschiedenis: verdiend per week of maand
 - Netto in plaats van bruto
 - [x] Money game-ontwerp: donker/goud thema, muntenstapels (1 munt = 1% van je dag) met vallende munten,
